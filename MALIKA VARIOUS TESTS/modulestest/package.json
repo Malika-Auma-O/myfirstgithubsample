@@ -1,0 +1,19 @@
+{
+  "name": "modulestest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "add.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "webpack": "^5.76.2"
+  },
+  "devDependencies": {
+    "webpack-cli": "^5.0.1"
+  }
+}

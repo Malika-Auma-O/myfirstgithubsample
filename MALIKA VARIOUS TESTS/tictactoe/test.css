@@ -1,0 +1,46 @@
+h1 {
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    border: 5px solid;
+}
+
+td {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid black;
+}
+
+body {
+       margin: 10%  ;
+   
+}
+
+.x {
+    color: blue;
+    font-size: 80px;
+}
+
+.o {
+    color: red;
+    font-size: 80px;
+}
+
+.win {
+    background-color: yellowgreen;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+#reset {
+    margin: 48px 40%;
+    padding: 20px;
+}

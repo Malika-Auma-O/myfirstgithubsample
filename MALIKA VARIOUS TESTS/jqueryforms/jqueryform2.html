@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <script src="node_modules/jquery-validation/dist/jquery.validate.js"></script>
+    <script ></script>
+    <link rel="stylesheet" href="jqueryform.css">
+</head>
+<body>
+    <form class="cmxform" id="signupForm" method="get" action="form-handler.html" autocomplete="off">
+        <fieldset>
+          <legend>sign-up Form</legend>
+          <p>
+            <label for="firstname">Firstname</label>
+            <input id="firstname" name="firstname" type="text">
+          </p>
+          <p>
+            <label for="lastname">Lastname</label>
+            <input id="lastname" name="lastname" type="text">
+          </p>
+          <p>
+            <label for="username">Username</label>
+            <input id="username" name="username" type="text">
+          </p>
+          <p>
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password">
+          </p>
+          <p>
+            <label for="confirm_password">Confirm password</label>
+            <input id="confirm_password" name="confirm_password" type="password">
+          </p>
+          <p>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email">
+          </p>
+          <p>
+            <label for="agree">Please agree to our policy</label>
+            <input type="checkbox" class="checkbox" id="agree" name="agree">
+          </p>
+          <p>
+            <label for="newsletter">I'd like to receive the newsletter</label>
+            <input type="checkbox" class="checkbox" id="newsletter" name="newsletter">
+          </p>
+          <fieldset id="newsletter_topics">
+            <legend>Topics (select at least two)</legend>
+            <label for="topic_marketflash">
+                <input type="checkbox" id="topic_marketflash" value="marketflash" name="topic">
+                Marketflash</label>
+            <label for="topic_fuzz">
+                    <input type="checkbox" id="topic_fuzz" value="fuzz" name="topic">
+                    Latest fuzz</label>
+            <label for="topic_digester">
+                <input type="checkbox" id="topic_digester" value="digester" name="topic">
+            Mailing list digester</label>
+             <label for="topic" class="error">Please select at least two topics you'd like to receive</label>     
+          </fieldset>
+          <p>
+            <input class="submit" type="submit" value="submit">
+          </p>
+        </fieldset>
+      </form>
+      <script src="jqueryform2.js"></script>
+</body>
+</html>
+
+
+
+
+

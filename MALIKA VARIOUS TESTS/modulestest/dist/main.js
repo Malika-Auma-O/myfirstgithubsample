@@ -1,0 +1,1 @@
+(()=>{"use strict";function o(o,n,c){"+"===c?function(o,n){console.log(o+n)}(o,n):"-"===c?function(o,n){console.log(o-n)}(o,n):console.log("wrong op")}o(7,3,"+"),o(10,3,"-"),o(7,3,"*")})();
