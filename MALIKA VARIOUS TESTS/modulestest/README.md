@@ -37,3 +37,33 @@ module.exports = {
 // after running the webpack, a dist folder is automatically created which automatically creates our "main.js" file which is pulled from our webpack.config.js
 
 9. Connect the<script scr = "./dist/main.js"></script> to your HTML file
+
+
+Section 2:Adding BaBel https://github.com/babel/babel-loader 
+
+//This package allows transpiling JavaScript files using Babel and webpack.
+
+1. install by typing in terminal this command : npm install -D babel-loader @babel/core @babel/preset-env webpack 
+(babel folders/files will appear inside the node_modules folder)
+
+2. Within your webpack configuration object(webpack.config.js), you'll need to add the babel-loader to the list of modules:
+
+ module: {
+  rules: [
+    {
+      test: /\.m?js$/,
+      exclude: /node_modules/,
+      use: {
+        loader: 'babel-loader',
+        options: {
+          presets: [
+            ['@babel/preset-env', { targets: "defaults" }]
+          ]
+        }
+      }
+    }
+  ]
+}
+
+//To use this configuration file, you would typically run the webpack command in the terminal, which will read the configuration from webpack.config.js and bundle the project files according to the specified settings:
+$ webpack

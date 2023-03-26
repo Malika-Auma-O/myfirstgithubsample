@@ -14,4 +14,5 @@ function calculate(a, b, op){
 
 calculate(7, 3, "+");
 calculate(10, 3, "-");
-calculate(7, 3, "*")
+calculate(7, 3, "*");
+calculate(20, 20, "+");
