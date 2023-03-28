@@ -1,0 +1,63 @@
+table, table td, table th {
+    border: 1px solid black;
+}
+
+#header {
+    height: 100vh;
+    width: 100%;
+    background-color: blue;
+}
+
+#content {
+    background-color: yellow;
+}
+
+#footer {
+    background-color: green;
+}
+
+dl, dt {
+    border: 1px solid black;
+
+}
+
+li:hover {
+  background-color: yellow;
+}
+
+li:active {
+  color: red;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #dcb7f9;
+  }
+
+  table {
+    border-collapse: collapse;
+  }
+
+  th,
+  td {
+    border: 1px solid #cecfd5;
+    padding: 10px 15px;
+  }
+
+
+  table {
+    border-collapse: separate;
+    border-spacing: 4px;
+  }
+  table,
+  th,
+  td {
+    border: 1px solid #cecfd5;
+  }
+
+  th,
+  td {
+    padding: 10px 15px;
+  }
+
+
+  
