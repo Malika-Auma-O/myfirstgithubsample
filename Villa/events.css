@@ -1,0 +1,17 @@
+#event-banner {
+    width: 100%;
+    height: 200px;
+}
+
+hr {
+    height: 2px;
+    background-color: brown;
+    border-color: brown;
+    margin: 5%;
+  }
+
+  #event-images {
+    text-align: center;
+  }
+
+  
