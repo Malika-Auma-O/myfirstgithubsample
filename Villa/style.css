@@ -21,10 +21,7 @@ body {
     padding: 0;
   }
   
-  a {
-    text-decoration: none;
-    color: #333;
-  }
+
   
   /* Header styles */
   
@@ -130,14 +127,23 @@ body {
     text-align: left;
   }
 
-  #blueFacebook {
-    color: navy;
-    font-weight: bold;
-  }
+/*a:link {
+  color: blue;
+}
 
-  #blueFacebook:hover {
-    color: blue;
-  }
+a:visited {
+  color: purple;
+}*/
+
+a:hover {
+  color: red;
+  text-decoration: underline;
+}
+
+a:active {
+  color: green;
+}
+
 
   /* Style all font awesome icons */
 .fa {
@@ -160,20 +166,24 @@ body {
 .fa-facebook {
   background: #3B5998;
   color: white;
+  border-radius: 50%; 
 }
 
 /* Twitter */
 .fa-twitter {
   background: #55ACEE;
   color: white;
+  border-radius: 50%; 
 }
 
 .fa-instagram {
   background: #E1306C;
   color: white;
+  border-radius: 50%; 
   }
   
   .fa-youtube {
     background: #FF0000;
     color: white;
+    border-radius: 50%; 
     }
