@@ -1,0 +1,83 @@
+/*This will position the caption element relative to its normal position, moving it 200 pixels to the right. this does not affect the position of the image or any other elements on the page. Only the caption element is moved.  */
+.caption {
+    position: relative;
+    left: 200px;
+  } 
+  
+  .image-container {
+    background-color: darksalmon;
+  }
+  nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: aqua;
+  }
+ 
+  .fixed-box {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #ccc;
+  }
+  
+  p {
+    margin-top: 20px;
+  }
+  
+  p {
+    color: red;
+  }
+  
+  .special {
+    color: blue !important;
+  }
+
+  h2[rel="friend"] {
+    background-color: greenyellow;
+ }
+
+ a[href="http://perishablepress.com"] { 
+    color: red; 
+}
+  
+h1[rel*="external"] { color:purple}
+
+h1[rel^="external"] { color: yellow; }
+
+h3[rel~="external"] { color: brown }
+
+h4[rel|="friend"] { color: cadetblue; }
+
+h5[rel="handsome"][title^="Important"] { color: lightcoral; }
+
+.container {
+    width: 600px; /* Set the width of the container to fit 20 boxes in a row */
+    overflow: hidden; /* Clear floats */
+  }
+  
+  .box {
+    width: 30px; /* Set the width and height of each box */
+    height: 30px;
+    background-color: #ccc;
+    margin: 5px; /* Add some margin between boxes */
+    float: left; /* Float boxes to the left */
+  }
+  
+  .grid {
+    list-style: none; /* Remove bullet points from list items */
+    margin: 0;
+    padding: 0;
+    width: 600px; /* Set the width of the grid to fit 20 items in a row */
+    overflow: hidden; /* Clear floats */
+  }
+  
+  .grid li {
+    width: 30px; /* Set the width and height of each box */
+    height: 30px;
+    background-color: #eb9898;
+    margin: 5px; /* Add some margin between boxes */
+    float: left; /* Float list items to the left */
+  }
+  
+  

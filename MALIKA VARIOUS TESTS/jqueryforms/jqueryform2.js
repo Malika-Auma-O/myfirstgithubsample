@@ -83,3 +83,66 @@ $().ready(function() {
         topicInputs.attr("disabled", !this.checked);
     });
 });
+
+
+/*
+$(document).ready(function(){
+    // validate the sign-up-form on keyup and submit
+    $("#sign-up-form").validate({
+        rules: {
+            email: {
+                required: true,
+                email: true
+            },
+            phone: {
+                required: true,
+                phoneUS: true
+            },
+            password: {
+                required: true,
+                minlength: 8,
+                pattern: /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,16}$/
+            },
+            confirm_password: {
+                required: true,
+                minlength: 5,
+                equalTo: "#password"
+            }
+        },
+        messages: {
+            email: "Please enter a valid email address",
+            phone: "Enter your phone number.",
+            password : {
+                minlength: "Use 8 or more characters",
+                pattern: "Use upper and lower case letters",
+                pattern: "Use a number",
+                pattern: "Use a symbol"
+            },
+            confirm_password: "Confirm password field does not match the password field."
+        }
+    });
+
+    //code to hide verify-message
+    let  verifyMessage = $("#verify-message");
+    verifyMessage.hide();
+
+    //show verify-message when phoneInput is clicked
+    let phoneInput = $("#phone");
+    phoneInput.click(function() {
+        verifyMessage.show();
+    });
+
+    //code to hide hide_password
+    let confirmPassword = $("#hide_password")
+    confirmPassword.hide();
+
+    //show confirmPassword when passwordInput is clicked
+    let passwordInput = $("#password");
+    passwordInput.click(function(){
+        confirmPassword.show();
+    })
+
+
+
+})
+*/

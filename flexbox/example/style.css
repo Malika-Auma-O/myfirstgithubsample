@@ -1,0 +1,18 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    background-color: aqua;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    margin: 5px;
+    padding: 10px;
+}

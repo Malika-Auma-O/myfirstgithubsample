@@ -1,0 +1,41 @@
+/* always use container to use flex box for items in the container 
+by default flex direction is row
+you can change flex-direction to column*/
+
+.flex-container {
+    background-color: indianred;
+    height: 300vh;
+    border: 1px solid black;
+    display: flex;
+    justify-content:flex-start;
+    align-items:flex-start; /*stretch fill container, center shows actual height */
+   /* flex-wrap: wrap;
+    /*wrap items so if smaller screen they wrap below. default is no wrap*/
+    /*align-content: space-between;*//*works when we have multiple content and also flex wrap*/
+    /*flex-direction: column; direction will be column*/
+}
+
+
+.flex-item{
+    border: 3px black solid;
+    background-color: white;
+    width: 200px;
+    margin: 10px;
+    padding: 5px;
+}
+
+.flex-item1 {
+    min-height: 300px;
+    flex-shrink: 2;/*will shrink it faster than item2or3*/
+    flex-grow: 2;/*will grow faster*/
+}
+
+.flex-item2 {
+    min-height: 200px;
+    flex-grow: 2;/*will grow faster than 3*/
+    
+}
+
+.flex-item3 {
+    min-height: 100px;
+}
