@@ -1,0 +1,35 @@
+
+
+#div-before {
+    background-color: blueviolet;
+   }
+
+#div-1 {
+    background-color: black;
+    position:relative;
+   top:20px;
+    left:-40px;
+   }
+
+   #div-1a {
+    background-color: red;
+    position:absolute;
+   top:0;
+ right:0;
+ width:200px;
+    
+   }
+
+   #div-1b {
+    background-color: greenyellow;
+    width: 200px;
+   }
+
+   #div-1c {
+    background-color: blue;
+    width: 200px;
+   }
+
+   #div-after {
+    background-color: blueviolet;
+   }

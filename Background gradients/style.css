@@ -1,0 +1,53 @@
+/* background-color: greenyellow; */
+/* background-color: rgb(rgb(0, 0, 0)); 0 red 0 green 0 blue = black */
+/* background-color: rgb(rgb(255, 255, 255)); maximum for all colors = white */
+/* background-color: rgb(255, 0, 0); 255 red is maximum 0 blue o green = red */
+/* background-color: rgb(0, 0, 255); 0 red 0 green 255 blue = blue */
+/* rgba alpha property a: 0-1 for transparency or opacity*/
+/* background-color: rgba(red, green, blue, alpha); */
+/* background-color: rgba(160, 64, 0, 0.5); */
+/* opacity: 0.9; you can use this or simply use rgba color for opacity */
+/*background-color: #202020; hexadecimal numbers 0-9 then 10 represented by a then b c to f. ff is like 255 in rgb. the first 2 digits represent red, the second 2 green the last 2 blue, so #ff0000; is red. #000 is black without duplicating the 0 is shorthand. so if you have a value of 0, no need to put 00 */
+/* background-color: hsla(hue, saturation, lightness, alpha); */
+/* background-color: hsla(14, 100%, 50%, 0.7); */
+/* background shortcut takes color or image as property
+ background: url(./images/img1.avif);*/
+/* gradient color has linear-gradient or conical colors, they are considered as an image not color
+background-image: linear-gradient(to top, red, orange, yellow, blue, white); like line
+the value to top will reverse the colors, to left will be vertical from right to left etc. to right top will be like across from top or instead use degrees:
+background-image: repeating-linear-gradient(90deg, red 10%, yellow 10% 20%, yellow 0 30%, green 0 40%, blue, purple, white 50%);
+linear-gradient(45deg, red 10%, yellow 10% 20%, yellow 0 30%, green 0 40%, blue, purple, white);
+repeating repeat the color white on each section
+
+background-image: linear-gradient(to top, yellow 0 60%, white 60%); will show 0 -60% is yellow and 60% onwards is white
+  */
+
+  /*  background: radial-gradient(red, yellow, yellow, green, blue, purple, white ); by default it starts from centre you can put to left or to right etc */
+
+  /* background: conic-gradient(black 0 90deg, gray 90deg 180deg, white 0); white will be from 0 to end */
+
+body {
+  background-color: #888;
+}
+
+.gradient {
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  background-image: repeating-linear-gradient(90deg, red 10%, yellow 10% 20%, yellow 0 30%, green 0 40%, blue, purple, white 77%);
+}
+
+.radial {
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  background: radial-gradient(red, yellow, yellow, green, blue, purple, white );
+}
+
+.conic {
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  border-radius: 50%; /* this 50% transforms square to a circle*/
+  background: conic-gradient(black 0 90deg, gray 90deg 180deg, white 0);
+}

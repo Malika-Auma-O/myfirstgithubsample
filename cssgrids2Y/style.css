@@ -1,0 +1,83 @@
+/*reset*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.grid-container {
+    max-width: 660px;
+    background-color: lavender;
+    margin: 100px auto; /*center the container*/ 
+   display: grid; /*display: flex; will put them in rows*/
+   grid-template-areas: 
+   "head head head"
+   "sidebar content navigation"
+   ". footer navigation"
+   ;
+    gap: 20px 10px;
+   grid-template-columns: repeat(3, 1fr)/*1fr 1fr 2fr;/* each 1fr reps a column. to create several columns use function repeat(3, 1fr) means 3 columns with 1 fraction each. 2fr repeat(2, 1fr) means first column will be double fr and the 2 columns will have 1fr*/
+   /*grid-auto-rows: 100px; all boxes will have same height of 100px*/
+   /*grid-auto-rows: minmax(100px, auto); 100px width and auto height which adjusts if you add content /*all boxes will have same height of 100px*/
+   /*grid-template-rows: repeat(3. 1fr)*/
+   /*implicit grids*/
+   /*row-gap: 20px and column-gap: 15px; or simply use gap 20px 15px
+   justify-items: center;
+    align-items: center;
+    gap: 20px 10px;*/
+   
+}
+
+.grid-item {
+    
+    border: 1px solid blue;
+    padding: 10px;
+    margin: 10px;
+    background-color: rgb(7, 60, 118);
+    color: white;
+}
+
+
+/* grid-template-areas: 
+   "head head head" this spans 3 columns
+   "sidebar content navigation"
+   ". footer footer"  adding a dot creates a space
+   ;
+   the element below that will have grid area head will take the area according to above and so on with the rest of the titles
+   you can give them any name*/
+
+.grid-item:nth-of-type(1) {
+    grid-area: head;
+}
+.grid-item:nth-of-type(2) {
+    grid-area: navigation;
+}
+.grid-item:nth-of-type(3) {
+    grid-area: sidebar;
+}
+.grid-item:nth-of-type(4) {
+    grid-area: content;
+}
+.grid-item:nth-of-type(5) {
+    grid-area: footer;
+}
+
+
+/*
+.grid-item:nth-of-type(1){
+    /*grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-column: 1/3;
+    grid-row: 1/3;
+    background-color: black;
+}
+.grid-item:nth-of-type(4){
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row: 3/5;
+    grid-column: 3/4;
+    background-color: brown;
+}*/
+

@@ -39,3 +39,14 @@ you can change flex-direction to column*/
 .flex-item3 {
     min-height: 100px;
 }
+
+nav{
+    background-color: aquamarine;
+    
+}
+
+a{
+    text-decoration: none;
+    margin: 5px;
+    padding: 10px;
+}

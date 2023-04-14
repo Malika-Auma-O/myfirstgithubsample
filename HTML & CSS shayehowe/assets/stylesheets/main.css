@@ -1,4 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -12,8 +12,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -24,7 +24,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -48,6 +48,14 @@ table {
 }
 
 /*My code starts below*/
+
+/* Custom styles */
+body {
+	background: #293f50;
+  color: #888;
+  font: 300 16px/22px "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 /*
 Grid
 */
@@ -67,29 +75,252 @@ Grid
 	width: 960px;
   }
 
+		 /* Clearfix  to contain floats  */
+		 .group:before,
+		 .group:after {
+			 content: "";
+			 display: table;
+		 }
+		 .group:after {
+			 clear: both;
+		 }
+		 .group {
+			 clear: both;
+			 *zoom: 1;
+		 }
+
+		/* Rows */
+
+		.row,
+		.row-alt{
+			min-width: 960px;
+		}
+
+		.row {
+			background: #fff;
+			padding: 66px 0 44px 0;
+		}
+
+		.row-alt {
+			 background: #cbe2c1;
+			 background: -webkit-linear-gradient(to right, #a1d3b0, #f6f1d3);
+			 background: -moz-linear-gradient(to right, #a1d3b0, #f6f1d3);
+			 background: linear-gradient(to right, #a1d3b0, #f6f1d3);
+			 padding: 44px 0 22px 0;
+		 }
+
   /*
   Typography
 */
 
 h1, h3, h4, h5, p {
 	margin-bottom: 22px;
+	color: #648880;
   }
+
+	h1 {
+		font-size: 36px;
+		line-height: 44px;
+	}
+	h2 {
+		font-size: 24px;
+		line-height: 44px;
+	}
+	h3 {
+		font-size: 21px;
+	}
+	h4 {
+		font-size: 18px;
+	}
+
+	h5 {
+		color: #a9b2b9;
+		font-size: 14px;
+		font-weight: 400;
+		text-transform: uppercase;
+	}
+
+	strong {
+		font-weight: 400;
+	}
+	cite, em {
+		font-style: italic;
+	}
+
+	.tagline {
+		margin: 66px 0 22px 0;
+		margin: 66px 0 22px 0;
+    text-align: right;
+	}
+
+.primary-header
+	.primary-header a,
+.primary-footer a {
+  color: #fff;
+}
+
+.primary-header a:hover,
+.primary-footer a:hover {
+  color: #648880;
+}
+
+/*  Leads  */
+
+.lead {
+  text-align: center;
+}
+.lead p {
+  font-size: 21px;
+  line-height: 33px;
+}
+
+
+
+	/* Navigation */
+
+	.nav {
+		text-align: right;
+	}
+
+	.primary-nav {
+		font-size: 14px;
+		font-weight: 400;
+	}
+
+	.nav li {
+		display: inline-block;
+		margin: 0 10px;
+		vertical-align: top;
+	}
+	.nav li:last-child {
+		margin-right: 0;
+	}
+
+	/*  Links */
+	a:hover {
+		color: #a9b2b9;
+	}
+	a {
+		color: #648880;
+		text-decoration: none;
+	}
+
+	.teaser a:hover h3 {
+		color: #a9b2b9;
+	}
+
+	p a {
+		border-bottom: 1px solid #dfe2e5;
+	}
 
   /* Buttons*/
 
   .btn {
-	border-radius: 5px;
-	display: inline-block;
-	margin: 0;
+		border-radius: 5px;
+		color: #fff;
+		cursor: pointer;
+		display: inline-block;
+		font-weight: 400;
+		letter-spacing: .5px;
+		margin: 0;
+		text-transform: uppercase;
   }
-  
+
   .btn-alt {
-	border: 1px solid #dfe2e5;
-	padding: 10px 30px;
+		border: 1px solid #fff;
+		padding: 10px 30px;
   }
+
+	.btn-alt:hover {
+		background: #fff;
+		color: #648880;
+	}
 
   /*Home*/
 
   .intro {
-	padding: 22px 80px 66px 80px;
-  } 
+		color: #fff;
+  line-height: 44px;
+  padding: 22px 80px 66px 80px;
+  text-align: center;
+  }
+
+	.intro h2 {
+		font-size: 36px;
+	}
+
+	.intro p {
+		font-size: 24px;
+		font-weight: 100;
+	}
+
+	/* Primary header */
+  .logo {
+		border-top: 4px solid #648880;
+  float: left;
+  font-size: 48px;
+  font-weight: 100;
+  letter-spacing: .5px;
+  line-height: 44px;
+  padding: 40px 0 22px 0;
+  text-transform: uppercase;
+	}
+
+	/*   Primary footer */
+	.primary-footer small {
+		float: left;
+		font-weight: 400;
+	}
+
+	.primary-footer {
+		color: #648880;
+   font-size: 14px;
+		padding-bottom: 44px;
+		padding-top: 44px;
+	}
+
+	.col-1-3 {
+		width: 33.33%;
+	}
+
+	.col-2-3 {
+		width: 66.66%;
+	}
+
+	.col-1-3,
+.col-2-3 {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.grid,
+.col-1-3,
+.col-2-3 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.container,
+.grid {
+  margin: 0 auto;
+  width: 960px;
+}
+.container {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+/* About Us */
+.about-info {
+  border: 1px solid #dfe2e5;
+  border-radius: 5px;
+  margin-top: 88px;
+  padding: 22px 0;
+  text-align: center;
+}
+
+.persona {
+  margin-bottom: 44px;
+}
+
+

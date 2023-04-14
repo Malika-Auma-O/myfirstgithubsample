@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+}
+
+.container1 {
+  margin: 100px auto;
+}
+
+.header1 {
+  background-color: green;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  color: white;
+}
+
+.section1 {
+  background-color: green;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  color: white;
+  float: left;
+  margin: 0 1.5%;
+  width: 63%;
+}
+
+.aside1 {
+  background-color: green;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  color: white;
+  float: right;
+  margin: 0 1.5%;
+  width: 30%;
+}
+
+.footer1 {
+  background-color: green;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  color: white;
+  clear: both;
+}
+.group::before,
+.group::after {
+  content: "";
+  display: table;
+}
+
+.group:after {
+  clear: both;
+}
+.group {
+  clear: both;
+  *zoom: 1;
+}
+
+.container2 {
+  margin: 100px auto;
+}
+.header2 {
+  background-color: green;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  color: white;
+}
+
+.footer2 {
+  background-color: green;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  color: white;
+  clear: both;
+}
+
+.class1 {
+  background-color: green;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  color: white;
+}
+.class2 {
+  background-color: green;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  color: white;
+}
+.class3 {
+  background-color: green;
+
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  color: white;
+}
+
+.class1, .class2, .class3 {
+  float: left;
+  margin: 0 1.5%;
+  width: 30%;
+}

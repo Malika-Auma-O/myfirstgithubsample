@@ -4,14 +4,14 @@ Semantics within HTML is the practice of giving content on the page meaning and 
 
  Paragraphs are semantic in that content wrapped within a <p> element is known and understood as a paragraph. <div>s and <span>s do not hold any such meaning and are simply containers.
 
- Most elements are either block- or inline-level elements. 
+ Most elements are either block- or inline-level elements.
 
  Block-level elements begin on a new line, stacking one on top of the other, and occupy any available width.
 
  Inline-level elements do not begin on a new line. They fall into the normal flow of a document, lining up one after the other, and only maintain the width of their content.
 
- A <div> is a block-level element that is commonly used to identify large groupings of content, and which helps to build a web page’s layout and design. 
- 
+ A <div> is a block-level element that is commonly used to identify large groupings of content, and which helps to build a web page’s layout and design.
+
  A <span>, on the other hand, is an inline-level element commonly used to identify smaller groupings of text within a block-level element.
 
  choose a class or id attribute value that refers to the content of an element
@@ -90,7 +90,7 @@ Currently there are four primary ways to represent sRGB colors within CSS: keywo
 
 Length values in CSS come in two different forms, absolute and relative.
 -Absolute length values are the simplest length values, as they are fixed to a physical measurement, such as inches, cm, or mm, or px.
--Relative length values are not fixed units of measurement; they rely on the length of another measurement. 
+-Relative length values are not fixed units of measurement; they rely on the length of another measurement.
 (a)the % lengths are defined in relation to the length of parent element.
 (b)The em unit length is calculated based on an element’s font size. if an element has a font size of 14 pixels and a width set to 5em, the width would equal 70 pixels (14 pixels multiplied by 5).
 
@@ -114,7 +114,7 @@ p {
 Paragraph one. Paragraph two. Paragraph three.
 Usually a small space will exist between two inline-block elements.
 
-using a value of none will completely hide an element and render the page as if that element doesn’t exist. 
+using a value of none will completely hide an element and render the page as if that element doesn’t exist.
 div {
   display: none;
 }
@@ -144,13 +144,13 @@ The default height of an element is determined by its content. An element will e
 
 inline-level elements will not accept the width and height properties or any values tied to them.
 
-Depending on the element, browsers may apply default margins and padding to an element to help with legibility and clarity. We will generally see this with text-based elements. 
+Depending on the element, browsers may apply default margins and padding to an element to help with legibility and clarity. We will generally see this with text-based elements.
 
 we discussed using a CSS reset to tone all of these default values down to zero. Doing so allows us to work from the ground up and to specify our own values.
 
 The margin property allows us to set the amount of space that surrounds an element.Margins for an element fall outside of any border and are completely transparent in color
 
-One oddity with the margin property is that vertical margins, top and bottom, are not accepted by inline-level elements. 
+One oddity with the margin property is that vertical margins, top and bottom, are not accepted by inline-level elements.
 
 The padding property falls inside of an element’s border, should an element have a border. The padding property is used to provide spacing directly within an element.
 
@@ -182,10 +182,10 @@ The border property requires three values: width, style, and color. Shorthand va
 
  The most common border style values are solid, double, dashed, dotted, and none,
 
-Here is the code for a 6-pixel-wide, solid, gray border that wraps around all four sides of a <div>: 
+Here is the code for a 6-pixel-wide, solid, gray border that wraps around all four sides of a <div>:
 border: 6px solid gray;
 
-borders can be placed on one side of an element at a time if we’d like. Doing so requires new properties: border-top, border-right, border-bottom, and border-left. 
+borders can be placed on one side of an element at a time if we’d like. Doing so requires new properties: border-top, border-right, border-bottom, and border-left.
 
  if we wish to change only the width of the bottom border we can use the following code: border-bottom-width: 12px;
 
@@ -223,8 +223,8 @@ The best box-sizing value to use is border-box. The border-box value makes our m
 
 The only drawback to using the box-sizing property is that it isn’t supported in every browser
 
-Let’s start by adjusting our box size to use the border-box version of the box model, which will make sizing all of our elements much easier. 
-Within our main.css file, just below our reset, let’s add a comment to identify the code for what will become our grid and help determine the layout of our website. 
+Let’s start by adjusting our box size to use the border-box version of the box model, which will make sizing all of our elements much easier.
+Within our main.css file, just below our reset, let’s add a comment to identify the code for what will become our grid and help determine the layout of our website.
 We’re putting this below our reset so that it falls in the proper position within the cascade.
 
 we can use the universal selector, *, along with universal pseudo-elements, *:before and *:after, to select every imaginable element and change the box-sizing to border-box.
@@ -233,9 +233,9 @@ Next we’ll create a class that will serve as a container for our elements. We 
 
 Just below our universal selector rule set, let’s create a selector with a class of container. Within this selector let’s set our width to 960 pixels, our left and right padding to 30 pixels, our top and bottom margins to 0, and our left and right margins to auto.
 
-Setting a width tells the browser definitively how wide any element with the class of container should be. 
+Setting a width tells the browser definitively how wide any element with the class of container should be.
 
-Using a left and right margin of auto in conjunction with this width lets the browser automatically figure out equal left and right margins for the element, thus centering it on the page. 
+Using a left and right margin of auto in conjunction with this width lets the browser automatically figure out equal left and right margins for the element, thus centering it on the page.
 
 Lastly, the left and right padding ensures that our content isn’t sitting directly on the edge of the element and provides a little breathing room for the content.
 
@@ -276,4 +276,145 @@ The float property accepts a few values; the two most popular values are left an
 img {
   float: left;
 }
+When floating an element, it is also important to recognize that an element is removed from the normal flow of a page, and that may change an element’s default display value.
+ The float property relies on an element having a display value of block, and may alter an element’s default display value if it is not already displayed as a block-level element.
+ an element with a display value of inline, such as the <span> inline-level element, ignores any height or width property values. However, if it is floated, its display value will be changed to block, and it may then accept height or width property values.
 
+For two columns we can float one element to the left and another to the right
+To position these three <section> elements in a three-column row, instead of floating one column to the left and one column to the right, we’ll float all three <section> elements to the left. We’ll also need to adjust the width of the <section> elements to account for the additional columns and to get them to sit one next to the other.
+The float property was originally designed to allow content to wrap around images. An image could be floated, and all of the content surrounding that image could then naturally flow around it.
+
+To prevent content from wrapping around floated elements, we need to clear, or contain, those floats and return the page to its normal flow.
+use the clear property, which accepts values: left, right, and both.
+
+To contain floats, the floated elements must reside within a parent element. The parent element will act as a container, leaving the flow of the document completely normal outside of it.
+The CSS for that parent element, represented by the specific div class.  the :before and :after pseudo-elements, are dynamically generated elements above and below the element with the class div
+
+The technique for containing elements is know as a “clearfix”
+
+to remove the space between inline-block elements, you can either put each new <section> element’s opening tag on the same line as the previous <section> element’s closing tag.
+<section>
+  ...
+</section><section>
+Another way to remove the white space between inline-block elements is to open an HTML comment directly after an inline-block element’s closing tag. Then, close the HTML com- ment immediately before the next inline-block element’s opening tag.
+</section><!--
+--><section>
+
+Uniquely Positioning Elements
+By default every element has a position value of static.
+
+The relative value for the position property allows elements to appear within the normal flow a page, leaving space for an element as intended while not allowing other elements to flow around it
+With relatively positioned elements, it’s important to know that the box offset properties identify where an element will be moved from given its original position. Thus, the left property with a value of 20 pixels will actually push the element towards the right, from the left, 20 pixels. The top property with a value of 20 pixels, then, will push an element towards the bottom, from the top, 20 pixels.
+
+ an element with a position value of absolute will not appear within the normal flow of a document, and the original space and position of the absolutely positioned element will not be preserved.
+ absolutely positioned elements are moved in relation to their closest relatively positioned parent element. Should a relatively positioned parent element not exist, the absolutely positioned element will be positioned in relation to the <body> element.
+
+ Working with Typography
+ The terms “typeface” and “font” are often interchanged.
+ A typeface is what we see. It is the artistic impression of how text looks, feels, and reads.
+ A font is a file that contains a typeface. Using a font on a computer allows the computer to access the typeface.
+
+ The font-family property is used to declare which font—as well as which fallback or substitute fonts—should be used to display text.
+
+ Line height, the distance between two lines of text (often referred to as leading) is declared using the line-height property
+
+ The font property can accept multiple font-based property values. The order of these property values should be as follows, from left to right: font-style, font-variant, font-weight, font-size, line-height, and font-family.
+ font: italic small-caps bold 14px/22px "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+ Aligning text is an important part of building a rhythm and flow on a page; we do this using the text-align property.
+
+ The text-shadow property allows us to add a shadow or multiple shadows to text.
+
+ Using negative length values for the horizontal and vertical offsets allows us to move shadows toward the left and the top.
+
+ The text-shadow property places a shadow specifically on the text of an element. If we’d like to place a shadow on the element as a whole, we can use the box-shadow property.
+
+ The text-transform property accepts five values: none, capitalize, uppercase, lowercase, and inherit.
+
+ Using the letter-spacing property, we can adjust the space (or tracking) between the letters on a page. A positive length value will push letters farther apart from one another, while a negative length value will pull letters closer together. The keyword value none will return the space between letters back to its normal size.
+
+ The word-spacing property accepts the same length values and keywords as the letter-spacing property.
+
+every link on the page is underlined, which is the default style for anchor elements.
+
+ removing the underline from all anchor elements by way of the text-decoration property. Next, we’ll select all anchor elements that appear within a paragraph element and give them a bottom border.
+
+ We’d also like our navigation menus, both in the <header> and <footer> elements, to sit flush right. Because both the <header> and <footer> elements have child elements that are floated to the left, we can use the same approach as we did with our tagline.
+
+ The floated elements within the <header> and <footer> elements are taken out of the normal flow of the page, and this causes other elements to wrap around them. In this specific case, our navigation menus are the elements wrapping around the floated elements.
+
+ Using Web-Safe Fonts:
+ Arial
+Courier New, Courier
+Garamond
+Georgia
+Lucida Sans, Lucida Grande, Lucida
+Palatino Linotype
+Tahoma
+Times New Roman, Times
+Trebuchet
+Verdana
+
+We also have the ability to upload fonts to a server and include them on a website via the CSS @font-face at-rule.
+
+Embedding our own web fonts looks a bit like the following CSS. First, we use the @font-face at-rule to identify our font’s name, via the font-family property, as well as the source of our font (the path to the font file containing our chosen font), via the src property. From there we are able to use this font by including its name within any font-family property value.
+@font-face {
+  font-family: "Lobster";
+  src: local("Lobster"), url("lobster.woff") format("woff");
+}
+body {
+  font-family: "Lobster", "Comic Sans", cursive;
+}
+
+head over to the Google Fonts website and search for the font we’d like to use: Lato. Once we’ve found it, let’s proceed with adding it to our collection and following the steps on their website to use the font.
+
+hen the time comes to choose which font weights we’d like to use, let’s make sure to select 300 and 400, as we’ve already been using those within our CSS. Let’s also add 100 to the collection for another variation, too.
+
+Google will give us an additional <link> element to include in the <head> element of all of our pages. We’ll place this new <link> element directly below our existing <link> element.
+
+Writing online sometimes involves citing different sources or quotations. All of the different citation and quotation cases can be covered semantically in HTML using the <cite>, <q>, and <blockquote> elements.
+
+<cite>: Used to reference a creative work, author, or resource
+<q>: Used for short, inline quotations
+<blockquote>: Used for longer external quotations
+
+
+Setting Backgrounds & Gradients
+
+backgrounds can be a solid color, an image, a gradient, or a combination of these.
+
+The background property accepts colors and images in shorthand form, while the background-color property is used strictly for setting solid background colors.
+
+Background images work similarly to background colors; however, they offer a few additional properties to finesse the images.
+ background-image: url("alert.png");
+
+ By default, a background image will repeat indefinitely, both vertically and horizontally, unless otherwise specified.
+
+ By default, background images are positioned at the left top corner of an element. However, by using the background-position property, we can control exactly where the background image is placed relative to that corner.
+
+Having two <section> elements wrapping the exact same content diminishes semantic value. To correct this we’ll change the second <section> element, the one with the class of grid, to a <div> element
+
+ Within our new row class rule set, let’s add a white background, a minimum width of 960 pixels (to make sure our row elements are always larger than the width of our container or grid elements)
+
+We can create a gradient using the background or background-image properties, just like a regular background image. The property value for a gradient background varies depending on what type of gradient we’d like, linear or radial.
+
+We’ll create a new row with a gradient background by using the class of row-alt. Because the new row will share the same min-width property and value as the row class selector, we’ll combine these two selectors.
+
+Using Multiple Background Images
+The background image value that comes first will be the foremost background image, and the background image that’s listed last will be the rearmost background image. Any value between the first and the last will reside within the middle ground accordingly.  background:
+url("foreground.png") 0 0 no-repeat, url("middle-ground.png") 0 0 no-repeat, url("background.png") 0 0 no-repeat;
+
+Creating Lists
+The quickest way to display a list on a single line is to give the <li> elements a display property value of inline or inline-block. Doing so places all the <li> elements within a single line, with a single space between each list item.
+
+Changing the display property value to inline or inline-block is quick; however, it removes the list item marker. If the list item marker is needed, floating each <li> element is a better option than changing the display property.
+
+Setting all <li> elements’ float property to left will horizontally align all <li> elements directly next to each other without any space between them. When we float each <li> element, the list item marker is displayed by default and will actually sit on top of the <li> element next to it. To prevent the list item marker from being displayed on top of other <li> elements, a horizontal margin or padding should be added.
+
+We’ll often develop, and find, navigation menus using unordered lists. These lists are commonly laid out as horizontal lists, using either of the two techniques previously mentioned.
+
+Currently the navigation menus within the <header> and <footer> elements on our pages consist of a handful of anchor elements. These anchor elements could be better organized in an unordered list.
+
+we know that opening an HTML comment at the end of a <li> element and closing an HTML comment at the beginning of a <li> element will remove blank space when positioning.
+
+Adding Media

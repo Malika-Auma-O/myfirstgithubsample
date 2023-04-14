@@ -1,0 +1,27 @@
+
+#red {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    float: left;
+  }
+  #green {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    float: left;
+  } 
+  #blue {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    float: left;
+    clear: left;
+  }
+  #yellow {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    float: left;
+    /*clear: left;*/
+  }

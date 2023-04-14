@@ -1,0 +1,22 @@
+/* background image by default repeats image. background-repeat has repeat-y for vertical and repeat-x for horizontal repetition and no repeat it does not repeat it */
+/* background-position: 0%; by default is on top left corner 100% wil put it in top right corner or simply choose top right, center, bottom*/
+/* background-attachment:fixed; image will be in foxed position, scroll will move */
+/* background-size: cover; the image will cover the whole screen */
+/* background properties help achieve responsiveness without using media queries */
+/* have multiple values for background image in one line, remove cover size:
+background: url(./images/img3.avif), linear-gradient(black, white);*/
+
+/* body {
+  background: url(./images/img3.avif);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment:fixed;
+  background-size: cover;
+} */
+
+body {
+  background: url(./images/img3.avif), linear-gradient(black, white);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment:fixed;
+}
