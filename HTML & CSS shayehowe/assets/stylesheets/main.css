@@ -209,6 +209,13 @@ h1, h3, h4, h5, p {
 		color: #a9b2b9;
 	}
 
+	.teaser img {
+		border-radius: 5px;
+		display: block;
+		margin-bottom: 22px;
+		max-width: 100%
+	}
+
 	p a {
 		border-bottom: 1px solid #dfe2e5;
 	}
@@ -310,17 +317,83 @@ h1, h3, h4, h5, p {
   padding-right: 30px;
 }
 
-/* About Us */
+/* About Us page */
 .about-info {
   border: 1px solid #dfe2e5;
   border-radius: 5px;
   margin-top: 88px;
-  padding: 22px 0;
+  padding-bottom: 22px;
   text-align: center;
 }
+
+.about-info img {
+  border-radius: 50%;
+  height: 130px;
+  margin: -66px 0 22px 0;
+  vertical-align: top;
+}
+
 
 .persona {
   margin-bottom: 44px;
 }
 
+/* Contact us page */
+
+.venue-form {
+  margin-bottom: 66px;
+}
+.venue-location {
+  margin-bottom: 22px;
+}
+
+.venue-map {
+	height: 264px;
+	margin-top: 40px;
+}
+
+.why-help {
+  list-style: square;
+  margin: 0 0 22px 30px;
+}
+
+form {
+  margin-bottom: 22px;
+}
+
+input,
+textarea {
+  font: 300 16px/22px "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.message-group label {
+  color: #648880;
+  cursor: pointer;
+  font-weight: 400;
+}
+.message-group input,
+.message-group textarea {
+  border: 1px solid #c6c9cc;
+  border-radius: 5px;
+  color: #888;
+  display: block;
+  margin: 5px 0 27px 0;
+  padding: 5px 8px;
+	width: 100%;
+}
+
+.register-group textarea {
+  height: 78px;
+}
+
+.btn-default {
+  border: 0;
+  background: #648880;
+  padding: 11px 30px;
+  font-size: 14px;
+	border-radius: 5px;
+}
+.btn-default:hover {
+  background: #77a198;
+}
 

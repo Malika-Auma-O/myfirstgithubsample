@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  color: red;
+}
+
+.title {
+  font-size: 6rem;
+}
+
+.subtitle {
+  font-size: 4rem;
+}
+
+/* type of device can be screen, print for printing, or speech device for text to speech or simply all types to select all device types
+use and to concatenate
+media query selector based on width is the most common
+inside the brackets rite normal css code
+
+in */
+
+ @media all and (max-width: 500px) {
+  body {
+    color: blue;
+  }
+} 
+
+/*
+if you leave out all it will automatically select all device types*/
+
+@media (max-width: 500px) {
+  body {
+    color: blue;
+  }
+}
+
+/* anytime we are printing, if we want color to be blue, we simply remove width and add print to media query */
+
+@media print {
+  body {
+    color: blue;
+  }
+}
+
+/* if we move the body that has the color below media query in the cascade, then page will appear red regardless of size because its reading from top to bottom */
+
+/* how to deal with the orientation of device to change screen style 
+example when it is in landscape mode the color here if title will be green*/
+
+@media (orientation: landscape) {
+  .title {
+    color: green;
+  }
+}
+/* this will only change color if in landscape and width is less than 500px wide*/
+@media (orientation: landscape) and (max-width: 500px) {
+  .title {
+    color: green;
+  }
+}
+/* here it will change color if it is landscape or width is below 500px */
+@media (orientation: landscape), (max-width: 500px) {
+  .title {
+    color: green;
+  }
+}
+
+
+
+/* out subtitle will be cyan in portrait mode */
+@media (orientation: portrait) {
+  .subtitle {
+    color: cyan;
+  }
+}
+
+/* this ill omit the header and footer from getting printed */
+@media print {
+  .header,
+  .footer {
+    display: none;
+  }
+}
+
+
+img {
+  max-width: 100%;
+  margin: 0 0 1.5em;
+}
+
+/* if for example we have several images and texts the text stretch when expanded and images stay in same position 
+we can add a media query to create a 2 column layout at around 600 px*/
+
+@media screen and (min-width: 600px) {
+  .box {
+    float: left;
+    width: 50%;
+  }  
+}
+
+@media screen and (min-width: 900px) {
+  .box {
+    width: 25%;
+  }  
+}
+
+
+
+/* we don't have to specify float left all the time. this approach of starting with small screen and adding  styles for ore complex layout is called mobile first*. you can do revers and go desktop first as well, but it is best to do mobile first and move on to more complex layouts/
+

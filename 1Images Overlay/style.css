@@ -1,0 +1,45 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  background-color: yellow;
+  height: 100vh;
+
+  /* we use flext to center our container */
+  display: flex; /* this will arrange the div items in columns within the container*/
+  justify-content: center; /*then this will be used to center top*/
+  align-items: center; /*this will align the item in the middle of the screen*/
+  position: relative; /* use this in order to use absolute position to child*/
+}
+
+.container .image {
+  width: 400px;
+  height: 400px;
+  background: url(./assets/image.avif);
+  background-position: center;
+  background-size: cover; /* */
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
+.container .overlay {
+  width: 400px;
+  height: 400px;
+  background-image: linear-gradient(to right, yellow, blue);
+  background-position: center;
+  background-size: cover; /* */
+  background-repeat: no-repeat;
+  position: absolute;
+  opacity: .5;
+}
+/* when we use absolute the overlay is now over the image and hiding it . We need to add opacity on the overlay for transparency*/
+
+h2 {
+  color: white;
+  position: absolute;
+  font-size: 140%;
+}
+

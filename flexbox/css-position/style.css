@@ -5,7 +5,8 @@
    }
 
 #div-1 {
-    background-color: black;
+    background-color: yellow;
+    opacity: 0.3;
     position:relative;
    top:20px;
     left:-40px;
@@ -17,19 +18,23 @@
    top:0;
  right:0;
  width:200px;
+ height: 200px;
     
    }
 
    #div-1b {
     background-color: greenyellow;
     width: 200px;
+    height: 200px;
    }
 
    #div-1c {
     background-color: blue;
     width: 200px;
+    height: 200px;
    }
 
    #div-after {
     background-color: blueviolet;
+    height: 200px;
    }

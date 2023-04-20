@@ -418,3 +418,212 @@ Currently the navigation menus within the <header> and <footer> elements on our 
 we know that opening an HTML comment at the end of a <li> element and closing an HTML comment at the beginning of a <li> element will remove blank space when positioning.
 
 Adding Media
+we use the <img> inline element. Ad src attribute and alt attribute.
+
+You can size it with the width and height attributes directly within the <img> tag in HTML, or using CSS
+
+Specifying either a width or height will cause the other dimension to adjust automatically to maintain the aspect ratio of the image. 
+
+If we want an image to be 200 pixels tall but are less specifically concerned about how wide it is, we can set the height to 200 pixels, and the width of the image will adjust accordingly. Setting both a width and height may break the aspect ratio of an image, causing it to appear distorted.
+
+While using the width and height attributes directly in HTML provides some semantic value by noting an image’s original size, it can be difficult to manage numerous images that all need to be the same size. In this event, it’s common practice to use CSS to resize the images.
+
+default images are positioned as inline-level elements; however, their positions may be changed using CSS, specifically the float, display, and box model properties, including padding, border, and margin.
+
+Adding the display property to an image and setting its value to block forces the image to be a block-level element. This makes the image appear on its own line
+img {
+  display: block;
+}
+
+ We may want the image to appear on the left or right side of its containing element, while all of the other content wraps around the image as necessary. To do this, we use the float property with a value of either left or right.
+
+ To provide spacing around an image, we’ll use the margin property. 
+
+ There are two primary ways to add images to a web page, use the <img> element within HTML, use the background or background-image property within CSS.
+
+ Since images are inline-level elements by default, let’s change our images within the teaser sections to block-level elements. 
+ 
+ Let’s also set their maximum width to 100% to ensure they don’t exceed the width of their respective columns. Changing this width value is important as it allows our images to adjust with the width of the columns as necessary.
+
+Let’s begin by applying the border-radius property with a value of 50%, turning our images into circles. From there, let’s set a fixed height of 130 pixels to each image and set them to be vertically aligned to the top of the line they reside within.
+
+Adding Audio
+<audio> element. the <audio> element accepts a source URL specified by the src attribute. 
+
+the most popular audio attributes include autoplay, controls, loop, and preload.
+
+By default, the <audio> element isn’t displayed on a page. If the autoplay Boolean attribute is present on the <audio> element, nothing will appear on the page, but the audio file will automatically play upon loading.
+<audio src="jazz.ogg" autoplay></audio>
+
+To display the <audio> element on a page, the controls Boolean attribute is necessary. It will display a browser’s default audio controls, including play and pause, seek, and volume controls.
+<audio src="jazz.ogg" controls></audio>
+
+the loop Boolean attribute will cause an audio file to repeat continually, from beginning to end.
+
+the preload attribute helps identify what, if any, information about the audio file should be loaded before the clip is played. 
+It accepts three values: none, auto, and metadata. 
+The none value won’t preload any information about an audio file, while the auto value will preload all information about an audio file. 
+The metadata value will preload any available metadata information about an audio file, such as the clip’s length, but not all information.
+
+When the preload attribute isn’t present on the <audio> element, all information about an audio file is loaded, as if the value was set to auto. For this reason, using the preload attribute with a value of metadata or none is a good idea when an audio file is not essential to a page.
+
+Audio Fallbacks & Multiple Sources
+At the moment, different browsers support different audio file formats, the three most popular of which are ogg, mp3, and wav. 
+For the best browser support we’ll need to use a handful of audio fallbacks.
+
+To begin, we’ll remove the src attribute from the <audio> element. Instead, we’ll use the <source> element, with a src attribute, nested inside the <audio> element to define a new source.
+
+Because it was introduced in HTML5, some browsers may not support the <audio> element. In this case, we can provide a link to download the audio file after any <source> elements within the <audio> element.
+<audio controls>
+  <source src="jazz.ogg" type="audio/ogg">
+  <source src="jazz.mp3" type="audio/mpeg">
+  <source src="jazz.wav" type="audio/wav">
+  Please <a href="jazz.mp3" download>download</a> the audio file.
+</audio>
+
+The <audio> element does not include a src attribute and instead wraps three different <source> elements. Each <source> element includes a src attribute that references a different audio file format and a type attribute to identify the format of the audio file. As a last fallback, if a browser doesn’t recognize any of the audio file formats, the anchor link to download the element will be displayed.
+
+Adding Video
+We use the <video> element. All of the same attributes (src, autoplay, controls, loop, and preload) and fallbacks apply here, too.
+
+With videos, if the controls Boolean attribute is not specified the video will display. However, it is fairly difficult to view unless the autoplay Boolean attribute is also applied. In general, the best practice here is to include the controls Boolean attribute.
+
+Since videos take up space on the page, specify their dimensions, which is most commonly done with width and height properties in CSS. 
+This helps ensure that the video isn’t too large and stays within the implied layout of a page.
+<video src="earth.ogv" controls></video>
+
+You can customise the player using JS
+
+The poster attribute allows us to specify an image, in the form of a URL, to be shown before a video is played.
+<video src="earth.ogv" controls poster="earth-video-screenshot.jpg"></video>
+
+Video Fallbacks
+<video controls>
+  <source src="earth.ogv" type="video/ogg">
+  <source src="earth.mp4" type="video/mp4">
+  Please <a href="earth.mp4" download>download</a> the video.
+</video>
+
+One additional fallback option that could be used in place of a plain text fallback is to use a YouTube or Vimeo embedded video. These video hosting websites allow us to upload our videos, provide a standard video player, and enable us to embed our videos onto a page using an inline frame.
+
+Adding Inline Frames
+Another way to add content to a page is to embed another HTML page within the current page. This is done using an inline frame, or <iframe> element. 
+The <iframe> element accepts the URL of another HTML page within the src attribute value; this causes the content from the embedded HTML page to be displayed on the current page.
+<iframe src="https://www.google.com/maps/embed?..."></iframe>
+
+The <iframe> element has a few default styles, including an inset border and a width and height. These styles can be adjusted using the frameborder, width, and height HTML attributes or by using the border, width, and height CSS properties.
+
+  the column classes make both the <div> and <iframe> elements inline-block elements, we need to remove the empty space that will appear between them. To do so we’ll open an HTML comment directly after the closing <div> tag, and we’ll close the HTML comment immediately before the opening <iframe> tag.
+
+  We can search for these addresses in Google Maps. Once we locate an address and create a customized map, we have the ability to embed that map into our page. Following the instructions on Google Maps for how to share and embed a map will provide us with the HTML for an <iframe> element.
+
+  Semantically Identifying Figures & Captions
+  With HTML5 also came the introduction of the <figure> and <figcaption> elements. These elements were created to semantically mark up self-contained content or media, commonly with a caption. Before HTML5 this was frequently done using an ordered list.
+
+  The <figure> block-level element is used to identify and wrap self-contained content, often in the form of media. It may surround images, audio clips, videos, blocks of code, diagrams, illustrations, or other self-contained media
+
+  More than one item of self-contained content, such as multiple images or videos, may be contained within the <figure> element at a time. If the <figure> element is moved from the main portion of a page to another location (for example, the bottom of the page), it should not disrupt the content or legibility of the page.
+
+  <figure>
+  <img src="dog.jpg">
+  <figcaption>A beautiful black, brown, and white hound dog wearing kerchief.</figcaption>
+</figure>
+
+To add a caption or legend to the <figure> element, the <figcaption> element is used. The <figcaption> may appear at the top of, bottom of, or anywhere within the <figure> element; however, it may only appear once.
+
+Not all forms of media need to be included within a <figure> element or include a <figcaption> element; only those that are self-contained and belong together as a group.
+
+Building Forms
+We need to know how to build forms in order to acquire user input. we’ll use the <form> element. 
+
+The <form> element identifies where on the page control elements will appear. It will wrap all of the elements included within the form, much like a <div> element.
+<form action="/login" method="post">
+  ...
+</form>
+
+Different attributes can be applied to the <form> element, the most common of which are action and method. 
+
+The action attribute contains the URL to which information included within the form will be sent for processing by the server. 
+
+ text fields and textareas are used for collecting text- or string-based data.
+
+The <input> element uses the type attribute to define what type of information is to be captured within the control.
+
+Along with setting a type attribute, it is best practice to give an <input> element a name attribute as well. The name attribute value is used as the name of the control and is submitted along with the input data to the server.
+<input type="text" name="username">
+
+<input type="date" name="birthday">
+<input type="time" name="game-time">
+<input type="email" name="email-address">
+<input type="url" name="website">
+<input type="number" name="cost">
+<input type="tel" name="phone-number">
+Should a browser not understand one of these HTML5 type attribute values, it will automatically fall back to the text attribute value. 
+
+The <textarea> element can accept larger passages of text spanning multiple lines.  
+Because the <textarea> element only accepts one type of value, the type attribute doesn’t apply here, but the name attribute is still used.
+<textarea name="comment">Add your comment here</textarea>
+
+The <textarea> element has two sizing attributes: cols for width in terms of the average character width and rows for height in terms of the number of lines of visible text.
+The size of a textarea, however, is more commonly identified using the width and height properties within CSS.
+
+HTML also allows users to select data using multiple choice and drop-down lists. There are a few different options and elements for these form controls.
+<input type="radio" name="day" value="Friday" checked> Friday
+<input type="checkbox" name="day" value="Friday" checked> Friday
+
+To create a drop-down list we’ll use the <select> and <option> elements. The <select> element wraps all of the menu options, and each menu option is marked up using the <option> element.
+<select name="day" multiple>
+  <option value="Friday" selected>Friday</option>
+  <option value="Saturday">Saturday</option>
+  <option value="Sunday">Sunday</option>
+</select>
+The Boolean attribute multiple, allows a user to choose more than one option from the list at a time. 
+using the selected Boolean attribute on more than one <option> element within the menu will preselect multiple options.
+
+The submit button is created using the <input> element with a type attribute value of submit. The value attribute is used to specify the text that appears within the button.
+<input type="submit" name="submit" value="Send">
+As an <input> element, the submit button is self-contained and cannot wrap any other content.
+
+ If more control over the structure and design of the input is desired—along with the ability to wrap other elements—the <button> element may be used.
+
+ The <button> element performs the same way as the <input> element with the type attribute value of submit; however, it includes opening and closing tags, which may wrap other elements. By default, the <button> element acts as if it has a type attribute value of submit, so the type attribute and value may be omitted from the <button> element if you wish.
+<button name="submit">
+  <strong>Send Us</strong> a Message
+</button>
+
+Hidden inputs provide a way to pass data to the server without displaying it to users. Are used for tracking codes, keys, or other information that is not pertinent to the user but is helpful when processing the form. 
+This information is not displayed on the page; however, it can be found by viewing the source code of a page. It should not be used for sensitive or secure information.
+ <input type="hidden" name="tracking-code" value="abc-123">
+
+ To allow users to add a file to a form, much like attaching a file to an email, use the file value for the type attribute.
+ <input type="file" name="file">
+
+By using labels, fieldsets, and legends, we can better organize forms and guide users to properly complete them
+
+Labels provide captions or headings for form controls
+
+Fieldsets group form controls and labels into organized sections.
+ like a <section>, the <fieldset> is a block-level element that wraps related elements, within a <form> element. Fieldsets, by default, also include a border outline, which can be modified using CSS.
+ <fieldset>
+  <legend>Login</legend>
+  <label>
+    Username
+    <input type="text" name="username">
+  </label>
+  <label>
+    Password
+    <input type="text" name="password">
+  </label>
+</fieldset>
+
+A legend provides a caption, or heading, for the <fieldset> element.
+ On the page, the legend will appear within the top left part of the fieldset border.
+
+ Form & Input Attributes
+ -The disabled Boolean attribute turns off an element or control so that it is not available for interaction or input. <input type="text" name="username" disabled>
+
+ -The placeholder gives users further information on how the form input should be filled in.
+
+ -The required Boolean attribute enforces that an element or form control must contain a value on being submitted.
+ 
+ Currently our unordered list doesn’t have any list item markers. All of the browser default styles have been turned off by the CSS reset we added all the way back in Lesson 1. Let’s create some custom styles specifically for this unordered list.
