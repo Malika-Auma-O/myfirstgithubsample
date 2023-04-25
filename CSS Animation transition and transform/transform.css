@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+h3 {
+  text-align: center;
+  font-size: 150%;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+}
+
+.container {
+  position: absolute;
+  top: 70%;
+  right: 50%;
+  /* translate: 50% -50%; does the same as below*/
+  transform: translate(50%, -50%);
+  /* transform: rotate(45deg); */
+}
+
+.img1{
+  position: relative; /*in order for z-index value to work you need to use relative position on ig here*/
+  transform: rotate(8deg);
+  /* transform: scale(1); */
+  /* scale.5 will make img half its size. 2 will double the size */
+}
+/* transform allows you to rotate, scale, skew the element */
+
+.img2 {
+  transform: rotate(-8deg);
+/* negative values move anticlockwise, positive values ove it clockwise */
+}
+
+.img3 {
+  transform: translate(100px);
+}
+
+.img1:hover {
+  z-index: 1;
+}
+.img2:hover {
+  z-index: 2;
+  transform: scale(2);
+}
+.img3:hover {
+  z-index: 1;
+  transform: scale(2);
+}

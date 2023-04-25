@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  transition-property: width, background-color, height; /*these properties will determine what will be updated in the hover*/
+  transition-duration: 2s; /*nothing happens below in hover if you do not put duration*/
+  transition-delay: 2s;/* adds delay before the transition*/
+  /* transition: width 4s, height 1s, background-color; this ill be shorthand for the above and below*/
+  transition-timing-function: ease;
+}
+
+.square:hover {
+  width: 300px;
+  height: 400px;
+  background-color: brown;
+}
+
+
+
+
+

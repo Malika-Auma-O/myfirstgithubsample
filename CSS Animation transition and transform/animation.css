@@ -1,0 +1,59 @@
+.container {
+  background-color: aqua;
+  height: 500px;
+  width: 400px;
+  border: 1px solid rgb(17, 11, 11);
+  margin: 100px;
+  position: relative;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  background-color: orangered;
+  animation: malika;
+  animation-duration: 2s;
+  /* animation-iteration-count: infinite; */
+}
+
+/* @keyframes malika {
+  from {
+    background-color: blue;
+  } 
+  to {
+    background-color: yellow;
+  }
+} */
+
+@keyframes malika {
+  0% {
+    background-color: blue;
+    top: 0px;
+    left: 0px;
+  } 
+  25% {
+    background-color: yellow;
+    top: 0px;
+    left: 300px;
+  }
+  50% {
+    background-color: rgb(255, 0, 21);
+    top: 400px;
+    left: 300px;
+
+  }
+  75% {
+    background-color: rgb(255, 0, 195);
+    top: 400px;
+    left: 0px;
+
+  }
+  100% {
+    background-color: rgb(38, 255, 0);
+    top: 0px;
+    left: 0px;
+
+  }
+
+}

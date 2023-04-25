@@ -1,0 +1,56 @@
+.container {
+  width: 500px;
+  height: 500px;
+  background-color: rgb(53, 40, 152);
+}
+
+.element {
+  width: 200px;
+  height: 200px;
+  /* border-radius: 50%; */
+  background-color: red;
+  /* transition: all 3s ease-in-out 1s;  */
+  /* this targets all properties for a period of 3s, ease speed, and delay time before transition starts */
+}
+
+
+.container:hover .element {
+  animation: malikanimation 3s ease-in-out forwards 5 alternate;
+  /* forwards keeps it at the end 
+  it will repeat 5 times the animation
+  infite will make it run infinitely
+  alternate will reverse the direction flow*/
+}
+
+@keyframes malikanimation {
+  0% {
+    transform: translate(0px);
+  }
+
+  33% {
+    transform: translateY(300px);
+  }
+  66% {
+    transform: translateX(300px) translateY(300px);
+    border-radius: 50%;
+  }
+  100% {
+    transform: translateX(300px);
+    background-color: green;
+  }
+}
+
+.container:hover .element {
+  /* transform: translateX(300px); */
+  /* background-color: yellow;
+  width: 500px; */
+  /* transform: scale(1.5); */
+  /* transform: rotate(45deg); */
+  /* transform: translateX(300px);
+  transform: translateY(300px); */
+  /* transform: skewy(5deg);  */
+  /*by default, skew is following x direction*/
+}
+
+/* linear means it ill move at same speed
+ease in out it will start fast slow fast*/

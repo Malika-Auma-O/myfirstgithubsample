@@ -1,0 +1,196 @@
+
+
+/* h1:hover {
+  background-color: pink;
+}
+
+button {
+  position: relative;
+  outline: none;
+  border: none;
+  display: block;
+  background-color: #1642dd;
+  font-size: 24px;
+  letter-spacing: 3px;
+  padding: 25px 80px;
+  margin: 20px auto;
+  color: white;
+  border-radius: 20px;
+  box-shadow: 2px 6px #1234b1;
+}
+
+button:focus {
+  background-color: red;
+}
+
+button:hover {
+  box-shadow: 0px 4px #12341b ;
+  top: 5px;
+}
+
+button:active {
+  box-shadow: 0px 0px #12341b;
+  top: 6px;
+} */
+
+/* translate
+.div {
+  margin:  20px;
+  width: 100px;
+  height: 100px;
+  background-color: dodgerblue;
+  border: 2px solid black;
+} */
+
+/* .right {
+  transform: scale(2);
+  transform-origin: left;
+} */
+
+/* .right {
+  transform: rotate(45deg);
+  transform-origin: 0 0;
+} */
+
+/* .down {
+  transform: scale(2) rotate(-45deg);
+  transform-origin: 0 0;
+} */
+
+/* .down:hover {
+  transform: scale(.5);
+} */
+/* 
+.down {
+  transition-property: font-size background-color;
+  transition-duration: 3s, 6s;
+  transition-timing-function: ease-in;
+  transform: rotate(0.5turn);
+}
+
+.down:active {
+  background-color: red;
+  font-size: 35px;
+} */
+
+/* p {
+  font-size: 40px;
+  text-align: center;
+  animation-name: rainbowtext;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-delay: 5ms;
+  animation-iteration-count: infinite;
+
+}
+
+@keyframes rainbowtext {
+  0% {
+    color: red;
+    font-size: 50px;
+  }
+
+  25% {
+    color: orange;
+  }
+
+  50% {
+    color: yellow;
+    font-size: 40px;
+    transform: translateX(200px);
+  }
+
+  75% {
+    color: green;
+  }
+
+  85% {
+    color: blue;
+  }
+
+  100% {
+    color: purple;
+    font-size: 20px;
+  }
+} */
+
+/* .ball {
+  position: relative;
+  background-color: dodgerblue;
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+}
+
+.ball {
+  animation-name: bounce;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+
+}
+
+@keyframes bounce {
+  0% {
+    background-color: orchid;
+  }
+  25% {
+    transform: translateY(20px);
+  }
+  50% {
+    transform: translateY(30px);
+  }
+  70% {
+    transform: translateY(40px);
+    box-shadow: 0 7px gray;
+  }
+  100% {
+    transform: translateY(50px);
+  }
+  0% {
+
+  }
+  
+}
+ */
+
+ .spinner {
+  margin: 100px auto;
+  border: 16px solid #797979;
+  width: 120px;
+  height: 120px;
+  border-top-color: blue;
+  border-bottom-color: green;
+  border-radius: 50%;
+  animation: colorspin 4s linear infinite;
+ }
+
+ @keyframes colorspin {
+  0% {
+    transform: rotate(0deg)
+    scale(1);
+    border-top-color: blue;
+    border-bottom-color: green;
+  }
+  25% {
+    transform: rotate(0deg)
+    scale(1);
+    border-top-color: green;
+    border-bottom-color: blue;
+  }
+  50% {
+    transform: rotate(380deg);
+    border-top-color: blue;
+    border-bottom-color: green;
+  }
+  75% {
+    border-top-color: green;
+    border-bottom-color: blue;
+  }
+  100% {
+    transform: rotate(720deg);
+    border-top-color: blue;
+    border-bottom-color: green;
+  }
+  
+ }
