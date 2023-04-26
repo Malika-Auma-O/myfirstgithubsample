@@ -1,0 +1,6 @@
+div::before {
+  content: "before";
+}
+div::after {
+  content: "after";
+}

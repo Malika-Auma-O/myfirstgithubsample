@@ -1,0 +1,19 @@
+@import "./variables";
+@import "./header";
+
+.contact button {
+  background-color: $primaryBtn;
+}
+
+// .contact {
+//   @include flexCenter(row, blue);
+// }
+
+
+// @extend header will copy the header styles to .contact. To ove-ride some of the styles, define other styles below extend
+// We can o calculations by - + / *
+.contact {
+  @extend header;
+  background: lightcoral;
+  width: 100% - 20%;
+}

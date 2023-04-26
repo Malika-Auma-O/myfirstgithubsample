@@ -1,0 +1,40 @@
+.red {
+  background-color: red;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.green {
+  background-color: green;
+}
+
+.m10 {
+  margin-left: 10%;
+}
+
+.m30 {
+  margin-left: 30%;
+}
+
+.m50 {
+  margin-left: 50%;
+}
+
+.round {
+  border-radius: 7px;
+}
+
+.sb {background-color: green;
+  border: none;
+  padding: 10px;
+  border-radius: 7px;
+}
+
+.eb {background-color: red;
+  border: none;
+  padding: 10px;
+  border-radius: 7px;
+}
+

@@ -1,0 +1,49 @@
+// $direction is a parameter that can be used in this case as flex column or row depending on the parameter that will be added on the element that will use this function.
+
+// @mixin flexCenter($direction, $background) {
+//   height: 100vh;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   flex-direction: $direction;
+//   background: $background;
+// }
+
+
+// header {
+
+//   @include flexCenter(column, red);
+//   height: 100vh;
+  
+//   color: $textColor;
+
+//   button {
+//     background: $primaryBtn;
+//     &:hover {
+//       background-color: red;
+//     }
+//     &::after {
+//       content: " Hello-again";
+//     }
+//   }
+// }
+
+
+header {
+  background: lightblue; 
+  color: $textColor;
+  height: 50vh;
+  button {
+    background: $primaryBtn;
+    &:hover {
+      background-color: red;
+    }
+    &::after {
+      content: " Hello-again";
+    }
+  }
+}
+
+.contact button {
+  background: $primaryBtn;
+}

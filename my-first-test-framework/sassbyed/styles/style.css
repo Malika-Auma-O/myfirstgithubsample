@@ -1,0 +1,27 @@
+header, .contact {
+  background: lightblue;
+  color: rgb(58, 42, 42);
+  height: 50vh;
+}
+header button, .contact button {
+  background: rgb(182, 85, 153);
+}
+header button:hover, .contact button:hover {
+  background-color: red;
+}
+header button::after, .contact button::after {
+  content: " Hello-again";
+}
+
+.contact button {
+  background: rgb(182, 85, 153);
+}
+
+.contact button {
+  background-color: rgb(182, 85, 153);
+}
+
+.contact {
+  background: lightcoral;
+  width: 80%;
+}/*# sourceMappingURL=style.css.map */
