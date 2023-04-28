@@ -1,0 +1,18 @@
+/* colors */
+.primary {
+  background-color: blue;
+}
+
+/*fonts*/
+
+/* grid */
+/* dgri system 4 columns. medium is 2 columns, small is 1 column */
+
+/* buttons */
+
+/* nav */
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

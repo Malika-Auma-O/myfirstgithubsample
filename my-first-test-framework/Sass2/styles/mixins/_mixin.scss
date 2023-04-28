@@ -1,0 +1,12 @@
+
+@mixin square($dimensions, $width,  $color-theme) {
+  width: $dimensions;
+  height: $dimensions;
+  background-color: $color-theme;
+}
+@mixin circle($radius, $color-theme) {
+  width: $radius;
+  height: $radius;
+  background-color: $color-theme;
+  border-radius: 50%;
+}

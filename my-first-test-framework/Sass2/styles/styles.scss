@@ -1,0 +1,122 @@
+// $main-color: green;
+// $second-color: blue;
+// $optional-color: rgb(165, 42, 153);
+
+// mixin
+// @mixin square($dimensions, $width,  $color-theme) {
+//   width: $dimensions;
+//   height: $dimensions;
+//   background-color: $color-theme;
+// }
+
+// @mixin centering() {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// placeholder
+
+// %centering {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// %shared-message {
+//   width: 200px;
+//   height: 50px;
+//   text-align: center;
+//   margin: 0 auto;
+// }
+
+// partials and modules
+
+@use "./mixins/mixin" as *;
+@use "./placeholder/placeholder" as *;
+@use "./variables/variables" as *;
+
+h2 {
+  color: $main-color;
+}
+
+p {
+  $local-color: tomato; // use locally
+  $local-color2: rgb(116, 116, 8) !global; //use globally
+  color: $second-color;
+  span {
+    color: $local-color; //can only be used inside like a local variable
+  }
+}
+
+//declare below the global variable declaration otherwise when above it is not seen
+h3 {
+  color: $local-color2;
+}
+
+.main-header {
+  background-color: $main-color;
+  ul {
+    display: flex;
+    li {
+      list-style: none;
+      padding: 10px;
+      a {
+        text-decoration: none;
+        color: pink;
+      }
+    }
+  }
+}
+
+.parent {
+  @include square(300px, 300px, $main-color);
+  // @include centering();
+  @extend %centering;
+}
+
+.child {
+  @include square(100px, 100px, $second-color);
+  // @include centering();
+  @extend %centering;
+}
+
+.grandchild {
+  @include square(50px, 50px, $optional-color);
+}
+
+.success, .warning, .error {
+  @extend %shared-message;
+  background-color: $optional-color;
+}
+
+.warning {
+  background-color: $main-color;
+}
+
+.error {
+  background-color: $second-color;
+}
+
+// partials achieve modules part. partials are created by underscore before name of scss file, this way no need ofr s separate map and style. _placeholder.scss
+// modules allow to save code in a specific file but still read the code from style.css
+
+// using loops in sass
+// @for $i from start to :end {
+
+// }
+
+// .p is the padding class, i is variable and interpolation using brackets instead of backticks
+// this code will create padding of 1 to .p-1 of 2 to .p-2 and of 3 to .p-3 class in the styles.css folder
+@for $i from 1 to 4 {
+  .p-#{$i} {
+    padding: $i;
+  }
+}
+
+//this code will have the class a margin from 1 to 4 and include 4 as well unlike above
+@for $i from 1 through 4 {
+  .p-#{$i} {
+    margin: #{$i}px;
+  }
+}

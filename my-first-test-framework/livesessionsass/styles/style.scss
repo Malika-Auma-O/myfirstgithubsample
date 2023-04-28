@@ -1,0 +1,75 @@
+// variables
+
+// $main-color: red;
+// $secondary-color: blue;
+// $text-width: 300px;
+
+// h1 {
+//   background-color: $main-color; 
+//   width: $text-width;
+// }
+
+// h2 {
+//   background-color: $secondary-color;
+//   width:$text-width /2;
+// }
+
+// nesting
+
+// .container {
+//   background-color: pink;
+//   > p {
+//     color: green;
+//   }
+
+//   h1 {
+//     color: red;
+//   }
+
+//   h2 {
+//     color: blue;
+//   }
+
+//   nav {
+//     p {
+//       color: purple;
+//     }
+//   }
+// }
+
+// mixin
+
+// @mixin main-button($bc, $tc) {
+//   padding: 10px;
+//   border: none;
+//   border-radius: 7px;
+//   color: $tc;
+//   background-color: $bc;
+// }
+
+// .btn1 {
+//   @include main-button(blue, white);
+// }
+
+// .btn2 {
+//   @include main-button(red, blue);
+// }
+
+// extends
+
+// .btn3 {
+//   @extend .btn1;
+//   width: 200px;
+// }
+
+// import
+
+@import "./variables";
+
+.btn4 {
+  color: $textColor;
+  background-color: $primaryBtn;
+  padding: $pd;
+  border-radius: $bd;
+
+}

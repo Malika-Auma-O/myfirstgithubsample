@@ -1,0 +1,100 @@
+.parent, .child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.success, .warning, .error {
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+h2 {
+  color: green;
+}
+
+p {
+  color: blue;
+}
+p span {
+  color: tomato;
+}
+
+h3 {
+  color: rgb(116, 116, 8);
+}
+
+.main-header {
+  background-color: green;
+}
+.main-header ul {
+  display: flex;
+}
+.main-header ul li {
+  list-style: none;
+  padding: 10px;
+}
+.main-header ul li a {
+  text-decoration: none;
+  color: pink;
+}
+
+.parent {
+  width: 300px;
+  height: 300px;
+  background-color: green;
+}
+
+.child {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+}
+
+.grandchild {
+  width: 50px;
+  height: 50px;
+  background-color: rgb(165, 42, 153);
+}
+
+.success, .warning, .error {
+  background-color: rgb(165, 42, 153);
+}
+
+.warning {
+  background-color: green;
+}
+
+.error {
+  background-color: blue;
+}
+
+.p-1 {
+  padding: 1;
+}
+
+.p-2 {
+  padding: 2;
+}
+
+.p-3 {
+  padding: 3;
+}
+
+.p-1 {
+  margin: 1px;
+}
+
+.p-2 {
+  margin: 2px;
+}
+
+.p-3 {
+  margin: 3px;
+}
+
+.p-4 {
+  margin: 4px;
+}/*# sourceMappingURL=styles.css.map */
