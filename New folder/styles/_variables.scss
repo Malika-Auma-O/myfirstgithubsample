@@ -1,0 +1,49 @@
+// colors
+$primary-color: rgb(46, 112, 225);
+$secondary-color: rgb(40, 188, 139);
+$error-color: red;
+$info-color: yellow;
+
+// color palette map
+$colors: (
+  "primary-color": $primary-color,
+  "secondary-color": $secondary-color,
+  "error-color": $error-color,
+  "info-color": $info-color,
+  "black": black,
+  "white": white,
+  "gray": gray,
+  "red": red,
+  "blue": blue,
+  "green": green,
+  "yellow": yellow,
+  "orange": orange,
+  "purple": purple,
+);
+
+// .test-btn {
+//   background-color: map-get($colors, "purple")
+// }
+
+// @debug map-get($colors,"purple");
+// @debug map-has-key($map:$colors , $key:"secondary-color" );
+// @debug map-remove($map: $colors, $keys:$black ) this removes black color
+// @debug map-merge($colors , ("pink": pink)); //this will add pink to the pallette
+
+// spacing
+$main-padding: 1rem;
+$main-margin: 1rem;
+
+// border
+$main-border-weight: 1px;
+$main-border-radius: 10px;
+
+// box-shadow
+$main-box-shadow: 1px 3px 5px rgb(80, 78, 78);
+
+// font=sizes
+$main-font-size: 1rem;
+$font-size-sm: $main-font-size * .75;
+$font-size-lg: $main-font-size * 1.5;
+$font-size-xl: $main-font-size * 2;
+$font-size-xxl: $main-font-size * 3;

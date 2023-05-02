@@ -1,0 +1,227 @@
+/* reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-areas:
+    "div1 div1 div1 div1 div1 div1 div1 div1 div1 div1 div1 div1"
+    "div2 div2 div2 div2 div2 div2 div2 div3 div3 div3 div3 div3"
+    "div4 div4 div4 div4 div4 div4 div4 div4 div4 div4 div4 div4"
+    "div4 div4 div4 div4 div4 div4 div4 div4 div4 div4 div4 div4"
+    "div5 div5 div5 div5 div5 div5 div5 div5 div5 div5 div5 div5";
+  grid-gap: 10px;
+}
+
+.div1 {
+  grid-area: div1;
+  background-color: #F44336;
+  color: white;
+  padding: 5px;
+}
+
+.div2 {
+  grid-area: div2;
+  background-color: #E91E63;
+  color: white;
+  padding: 20px;
+}
+
+.div3 {
+  grid-area: div3;
+  background-color: #9C27B0;
+  color: white;
+  padding: 20px;
+}
+
+.div4 {
+  grid-area: div4;
+  background-color: #2196F3;
+  color: white;
+  padding: 20px;
+}
+
+ .div5 {
+  grid-area: div5;
+  background-color: #4CAF50;
+  color: white;
+  padding: 20px;
+}
+
+/* Typography check what position in the css this should be placed*/
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+p {
+  font-size: 1rem;
+  color: #343a40;
+  line-height: 1.2;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.15s ease-in-out;
+}
+
+a:hover {
+  color: #343a40;
+}
+
+.btn {
+  font-size: var(--button-font-size);
+  color: var(--button-color);
+  background-color: var(--button-background-color);
+  border-radius: var(--button-border-radius);
+  padding: var(--button-padding);
+  transition: background-color 0.15s ease-in-out;
+}
+
+.btn:hover {
+  color: var(--button-hover-color);
+  background-color: var(--button-hover-background-color);
+}
+
+/* Nav Bar */
+.navbar1, .navbar1 ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar1 ul li{
+  padding-left: 50px;
+
+}
+
+.navbar1 a {
+  color: white;
+}
+
+.leftnav {
+  padding-right: 30px;
+}
+
+.leftnav input {
+  margin-right: 20px;
+}
+
+/* div 4 images */
+.div4 {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* .div4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  MAKE THE IMAGES COVER THE SAME DIV AREA 
+} */
+
+
+footer {
+  font-size: 12px;
+  /* padding: 30px; */
+  background-color: gray;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+footer a {
+
+  padding-right: 10px;
+  color: #232527;
+}
+
+
+
+
+
+/* 
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 20px;
+}
+
+.row {
+  display: grid;
+  grid-template-areas: 
+    "col1 col2 col3"
+    "col4 col5 col6"
+    "col7 col8 col9"
+    "col10 col11 col12";
+  grid-template-rows: auto;
+}
+.col {
+  padding: 10px;
+}
+
+.col1 {
+  grid-area: col1;
+}
+
+.col2 {
+  grid-area: col2;
+}
+
+.col3 {
+  grid-area: col3;
+}
+
+.col4 {
+  grid-area: col4;
+}
+
+.col5 {
+  grid-area: col5;
+}
+
+.col6 {
+  grid-area: col6;
+}
+
+.col7 {
+  grid-area: col7;
+}
+
+.col8 {
+  grid-area: col8;
+}
+
+.col9 {
+  grid-area: col9;
+}
+
+.col10 {
+  grid-area: col10;
+}
+
+.col11 {
+  grid-area: col11;
+}
+
+.col12 {
+  grid-area: col12;
+} */

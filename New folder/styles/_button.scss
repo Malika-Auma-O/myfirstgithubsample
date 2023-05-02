@@ -1,0 +1,45 @@
+// mixin 
+// if we do not pass a value for bg-color by default it will use the color #e2e2e2
+@mixin button($bg-color: #e2e2e2) {
+  border: 0;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    padding: $main-padding $main-padding * 2;
+    border-radius: $main-border-radius;
+    background-color: $bg-color;
+}
+
+// this by default will have the generic color e2e2e2 since no value is passed
+.button-generic {
+  @include button;
+}
+
+
+@each $key, $val in $colors {
+  .button-#{$key} {
+    @include button($val);
+    &:hover {
+      background-color: lighten($val, 5); //this built in function will lighten the color by 5%
+    }
+  }
+
+  .button-outlined-#{$key} {
+    @include button(#fff);
+    border: $main-border-weight solid $val;
+    &:hover {
+      background-color: $val;
+    }
+  }
+
+  .button-compliment-#{$key} {
+    @include button($val);
+    color: light-comp($val);
+
+    &:hover {
+      color: $val;
+      background-color: light-comp($val);
+    }
+  }
+
+}

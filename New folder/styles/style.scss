@@ -1,0 +1,28 @@
+// variables
+@import "./functions";
+@import "./variables";
+
+// reset and layout
+@import "./reset";
+@import "./breakpoint";
+@import "./grid";
+
+// colors
+@import "./colors";
+
+// components(buttons, nav, cards)
+@import "./cards";
+@import "./button";
+
+// utilities (margin, padding, opacity)
+@import "./utilities";
+
+
+// button {
+//   color: white;
+//   border: 0;
+//   background: $primary-color;
+//   border-radius: $main-border-radius;
+//   padding: $main-padding;
+//   margin: $main-margin;
+// }

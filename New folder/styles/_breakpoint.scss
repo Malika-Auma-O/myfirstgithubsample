@@ -1,0 +1,54 @@
+$breakpoint: (
+  "small": 480px,
+  "medium": 720px,
+  "large": 960px,
+  "xl": 1200px,
+);
+
+@mixin small {
+  @media (min-width: map-get($breakpoint, "small")) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media (min-width: map-get($breakpoint, "medium")) {
+    @content;
+  }
+}
+@mixin large {
+  @media (min-width: map-get($breakpoint, "large")) {
+    @content;
+  }
+}
+@mixin xl {
+  @media (min-width: map-get($breakpoint, "xl")) {
+    @content;
+  }
+}
+
+// we give the breakpoint a default value of 0
+
+@mixin breakpoint($breakpoint: 0) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+// .responsive-test {
+//   @include small {
+//     color: blue;
+//   }
+//   @include medium {
+//     color: red;
+//   }
+//   @include large {
+//     color: green;
+//   }
+//   @include xl{
+//     color: purple;
+//   }
+//   @include breakpoint(1400px) {
+//     color: pink;
+//   }
+// }

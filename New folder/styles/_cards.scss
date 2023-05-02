@@ -1,0 +1,32 @@
+// @use "sass:math";
+// border-radius: math.div($main-border-radius, 4) this will divide the border radius by 4 in the function. You have to use sass math for divisions here
+
+.card {
+  display: block;
+  padding: $main-padding;
+  border: $main-border-weight solid #cecbcb;
+  border-radius: $main-border-radius / 4;
+  box-shadow: $main-box-shadow;
+  margin: 30px; //temporary to change or remove
+  max-width: 400px; //I will change this it is temporary
+
+  .card-heading {
+    font-size: $font-size-lg;
+    padding: $main-padding;
+    font-weight: bold;
+  }
+
+  .card-body {
+    font-size:$main-font-size;
+
+    a {
+      text-decoration: underline;
+    }
+  }
+}
+
+
+// to debug our sass code we use @debug rule.
+
+// @debug math.div(10,3);
+// @debug math.floor(2, 6);

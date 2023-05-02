@@ -1,0 +1,354 @@
+/**
+ * Generated with https://github.com/trungdq88/960-grid-generator
+ * Columns number: 12 column(s)
+ * Column width: 50px
+ * Column space: 10px
+ *
+ * Content width: 710px
+ * Full width: 720px
+ */
+ body {
+  min-width: 720px;
+}
+.container_12 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 720px;
+  overflow: hidden;
+}
+.grid_1,
+.grid_2,
+.grid_3,
+.grid_4,
+.grid_5,
+.grid_6,
+.grid_7,
+.grid_8,
+.grid_9,
+.grid_10,
+.grid_11,
+.grid_12
+{
+  display:inline;
+  float: left;
+  position: relative;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.push_1,.pull_1,
+.push_2,.pull_2,
+.push_3,.pull_3,
+.push_4,.pull_4,
+.push_5,.pull_5,
+.push_6,.pull_6,
+.push_7,.pull_7,
+.push_8,.pull_8,
+.push_9,.pull_9,
+.push_10,.pull_10,
+.push_11,.pull_11,
+.pull_12,.push_12
+{
+  position:relative;
+}
+.alpha {
+  margin-left: 0;
+}
+.omega {
+  margin-right: 0;
+}
+.container_12 .grid_1 {
+  width: 50px
+}
+.container_12 .grid_2 {
+  width: 110px
+}
+.container_12 .grid_3 {
+  width: 170px
+}
+.container_12 .grid_4 {
+  width: 230px
+}
+.container_12 .grid_5 {
+  width: 290px
+}
+.container_12 .grid_6 {
+  width: 350px
+}
+.container_12 .grid_7 {
+  width: 410px
+}
+.container_12 .grid_8 {
+  width: 470px
+}
+.container_12 .grid_9 {
+  width: 530px
+}
+.container_12 .grid_10 {
+  width: 590px
+}
+.container_12 .grid_11 {
+  width: 650px
+}
+.container_12 .grid_12 {
+  width: 710px
+}
+.container_12 .prefix_1 {
+  padding-left: 60px
+}
+.container_12 .prefix_2 {
+  padding-left: 120px
+}
+.container_12 .prefix_3 {
+  padding-left: 180px
+}
+.container_12 .prefix_4 {
+  padding-left: 240px
+}
+.container_12 .prefix_5 {
+  padding-left: 300px
+}
+.container_12 .prefix_6 {
+  padding-left: 360px
+}
+.container_12 .prefix_7 {
+  padding-left: 420px
+}
+.container_12 .prefix_8 {
+  padding-left: 480px
+}
+.container_12 .prefix_9 {
+  padding-left: 540px
+}
+.container_12 .prefix_10 {
+  padding-left: 600px
+}
+.container_12 .prefix_11 {
+  padding-left: 660px
+}
+.container_12 .suffix_1 {
+  padding-right: 60px
+}
+.container_12 .suffix_2 {
+  padding-right: 120px
+}
+.container_12 .suffix_3 {
+  padding-right: 180px
+}
+.container_12 .suffix_4 {
+  padding-right: 240px
+}
+.container_12 .suffix_5 {
+  padding-right: 300px
+}
+.container_12 .suffix_6 {
+  padding-right: 360px
+}
+.container_12 .suffix_7 {
+  padding-right: 420px
+}
+.container_12 .suffix_8 {
+  padding-right: 480px
+}
+.container_12 .suffix_9 {
+  padding-right: 540px
+}
+.container_12 .suffix_10 {
+  padding-right: 600px
+}
+.container_12 .suffix_11 {
+  padding-right: 660px
+}
+.container_12 .push_1 {
+  left: 60px
+}
+.container_12 .push_2 {
+  left: 120px
+}
+.container_12 .push_3 {
+  left: 180px
+}
+.container_12 .push_4 {
+  left: 240px
+}
+.container_12 .push_5 {
+  left: 300px
+}
+.container_12 .push_6 {
+  left: 360px
+}
+.container_12 .push_7 {
+  left: 420px
+}
+.container_12 .push_8 {
+  left: 480px
+}
+.container_12 .push_9 {
+  left: 540px
+}
+.container_12 .push_10 {
+  left: 600px
+}
+.container_12 .push_11 {
+  left: 660px
+}
+.container_12 .pull_1 {
+  left: -60px
+}
+.container_12 .pull_2 {
+  left: -120px
+}
+.container_12 .pull_3 {
+  left: -180px
+}
+.container_12 .pull_4 {
+  left: -240px
+}
+.container_12 .pull_5 {
+  left: -300px
+}
+.container_12 .pull_6 {
+  left: -360px
+}
+.container_12 .pull_7 {
+  left: -420px
+}
+.container_12 .pull_8 {
+  left: -480px
+}
+.container_12 .pull_9 {
+  left: -540px
+}
+.container_12 .pull_10 {
+  left: -600px
+}
+.container_12 .pull_11 {
+  left: -660px
+}
+
+/* Clear Floated Elements
+----------------------------------------------------------------------------------------------------*/
+
+/* http://sonspring.com/journal/clearing-floats */
+
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+/* http://www.yuiblog.com/blog/2010/09/27/clearfix-reloaded-overflowhidden-demystified */
+
+.clearfix:before,
+.clearfix:after {
+  content: '\0020';
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+/*
+  The following zoom:1 rule is specifically for IE6 + IE7.
+  Move to separate stylesheet if invalid CSS is a problem.
+*/
+
+.clearfix {
+  zoom: 1;
+}
+
+
+:root {
+  /* Colors */
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --success-color: #28a745;
+  --info-color: #17a2b8;
+  --warning-color: #ffc107;
+  --danger-color: #dc3545;
+  --light-color: #f8f9fa;
+  --dark-color: #343a40;
+
+  /* Typography */
+  --font-family-sans-serif: Arial, Helvetica, sans-serif;
+  --font-family-serif: Georgia, serif;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-sm: 0.875rem;
+  --line-height-base: 1.5;
+  --line-height-lg: 1.75;
+  --line-height-sm: 1.25;
+
+  /* Headings */
+  --headings-font-family: var(--font-family-serif);
+  --headings-font-weight: 700;
+  --headings-line-height: 1.2;
+  --h1-font-size: 2.5rem;
+  --h2-font-size: 2rem;
+  --h3-font-size: 1.75rem;
+  --h4-font-size: 1.5rem;
+  --h5-font-size: 1.25rem;
+  --h6-font-size: 1rem;
+
+  /* Paragraphs */
+  --paragraph-font-size: var(--font-size-base);
+  --paragraph-color: var(--dark-color);
+
+  /* Links */
+  --link-color: var(--primary-color);
+  --link-hover-color: darken(var(--primary-color), 10%);
+
+  /* Buttons */
+  --button-font-size: var(--font-size-base);
+  --button-color: var(--light-color);
+  --button-background-color: var(--primary-color);
+  --button-border-radius: 0.25rem;
+  --button-padding: 0.375rem 0.75rem;
+  --button-hover-color: var(--light-color);
+  --button-hover-background-color: darken(var(--primary-color), 10%);
+}
+
+/* Example usage */
+h1 {
+  font-family: var(--headings-font-family);
+  font-size: var(--h1-font-size);
+  font-weight: var(--headings-font-weight);
+  line-height: var(--headings-line-height);
+}
+
+p {
+  font-size: var(--paragraph-font-size);
+  color: var(--paragraph-color);
+  line-height: var(--line-height-base);
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.15s ease-in-out;
+}
+
+a:hover {
+  color: var(--link-hover-color);
+}
+
+.btn {
+  font-size: var(--button-font-size);
+  color: var(--button-color);
+  background-color: var(--button-background-color);
+  border-radius: var(--button-border-radius);
+  padding: var(--button-padding);
+  transition: background-color 0.15s ease-in-out;
+}
+
+.btn:hover {
+  color: var(--button-hover-color);
+  background-color: var(--button-hover-background-color);
+}

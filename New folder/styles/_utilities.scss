@@ -1,0 +1,197 @@
+@use 'sass:math';
+
+// utilities map
+$utilities: (
+  "padding":(
+    "prefix": "pad",
+    "values": (
+      "0": 0,
+      "1": $main-padding,
+      "2": $main-padding * 2,
+      "3": $main-padding * 4,
+      "4": $main-padding * 6,
+      "5": $main-padding * 8,
+    ),
+  ),
+
+  "padding-left":(
+    "prefix": "pad-l",
+    "values": (
+      "0": 0,
+      "1": $main-padding,
+      "2": $main-padding * 2,
+      "3": $main-padding * 4,
+      "4": $main-padding * 6,
+      "5": $main-padding * 8,
+    ),
+  ),
+
+  "padding-right":(
+    "prefix": "pad-r",
+    "values": (
+      "0": 0,
+      "1": $main-padding,
+      "2": $main-padding * 2,
+      "3": $main-padding * 4,
+      "4": $main-padding * 6,
+      "5": $main-padding * 8,
+    ),
+  ),
+
+  "padding-top":(
+    "prefix": "pad-t",
+    "values": (
+      "0": 0,
+      "1": $main-padding,
+      "2": $main-padding * 2,
+      "3": $main-padding * 4,
+      "4": $main-padding * 6,
+      "5": $main-padding * 8,
+    ),
+  ),
+
+
+  "padding-bottom":(
+    "prefix": "pad-b",
+    "values": (
+      "0": 0,
+      "1": $main-padding,
+      "2": $main-padding * 2,
+      "3": $main-padding * 4,
+      "4": $main-padding * 6,
+      "5": $main-padding * 8,
+    ),
+  ),
+
+
+  "margin":(
+    "prefix": "margin",
+    "values": (
+      "0": 0,
+      "1": $main-margin,
+      "2": $main-margin * 2,
+      "3": $main-margin * 4,
+      "4": $main-margin * 6,
+      "5": $main-margin * 8,
+    ),
+  ),
+  "margin-left":(
+    "prefix": "margin-l",
+    "values": (
+      "0": 0,
+      "1": $main-margin,
+      "2": $main-margin * 2,
+      "3": $main-margin * 4,
+      "4": $main-margin * 6,
+      "5": $main-margin * 8,
+    ),
+  ),
+
+  "margin-right":(
+    "prefix": "margin-r",
+    "values": (
+      "0": 0,
+      "1": $main-margin,
+      "2": $main-margin * 2,
+      "3": $main-margin * 4,
+      "4": $main-margin * 6,
+      "5": $main-margin * 8,
+    ),
+  ),
+
+  "margin-top":(
+    "prefix": "margin-t",
+    "values": (
+      "0": 0,
+      "1": $main-margin,
+      "2": $main-margin * 2,
+      "3": $main-margin * 4,
+      "4": $main-margin * 6,
+      "5": $main-margin * 8,
+    ),
+  ),
+
+  "margin-bottom":(
+    "prefix": "margin-b",
+    "values": (
+      "0": 0,
+      "1": $main-margin,
+      "2": $main-margin * 2,
+      "3": $main-margin * 4,
+      "4": $main-margin * 6,
+      "5": $main-margin * 8,
+    ),
+  ),
+
+  "opacity":(
+    "prefix": "opacity",
+    "values": (
+      "10": 0.1,
+      "20": 0.2,
+      "30": 0.3,
+      "40": 0.4,
+      "50": 0.5,
+      "60": 0.6,
+      "70": 0.7,
+      "80": 0.8,
+      "90": 0.9,
+      "100": 1,
+    ),
+  ),
+
+  "border-radius":(
+    "prefix": "b-radius",
+    "values": (
+      "default": $main-border-radius,
+      "none": 0,
+      "x-small": $main-border-radius / 4,
+      "small": $main-border-radius / 2,
+      "large": $main-border-radius * 2,
+      "full": 50%,
+    ),
+  ),
+
+  "display":(
+    "prefix": "display",
+    "values": (
+      "none": none,
+      "block": block,
+      "flex": flex,
+      "inline": inline,
+      "inline-b": inline-block,
+    ),
+  ),
+
+  "font-size":(
+    "prefix": "font",
+    "values": (
+      "small": $font-size-sm,
+      "medium": $main-font-size,
+      "large": $font-size-lg,
+      "xl": $font-size-xl,
+      "xxl": $font-size-xxl,
+    ),
+  ),
+  
+);
+
+
+// generate utility classes
+// for each property on the map in utilities, like padding etc, we get the prefix for it, then we get the values which could also be a map of values, using key(k) and value(v)
+
+@each $property, $map in $utilities {
+  $prefix: map-get($map, "prefix");
+  $values: map-get($map, "values");
+
+  @each $k, $v in $values {
+    @if($k == "default") {
+      .#{$prefix} {
+        #{$property}: $v;
+      }
+    } @else {
+      .#{$prefix}-#{$k} {
+        #{$property}: $v;
+      }
+    }
+  }
+}

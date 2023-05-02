@@ -1,0 +1,69 @@
+// we will cycle/loop through the colors pallette in _variable file
+// generate a text color class and background color class
+
+@each $key, $val in $colors {
+  .text-#{$key} {
+    color: $val
+  }
+
+  .text-hover-#{$key} {
+    &:hover {
+      color: $val;
+    }
+  }
+
+  .bg-#{$key} {
+    background-color: $val;
+  }
+
+  // if statement will avoid creating variations of black and white colors
+
+  @if($val != black and $val != white) {
+      // 5 light variations of text. we mix white with different colors
+  // mix() will mix white with the value and multiply i by 20%
+  @for $i from 1 through 5 {
+    .text-#{$key}-light-#{$i} {
+      color: mix(white, $val, $i * 20)
+    }
+
+    .text-hover-#{$key}-light-#{$i} {
+      &:hover {
+        color: mix(white, $val, $i * 20);
+      }
+    }
+
+    .bg-#{$key}-light-#{$i} {
+      background-color: mix(white, $val, $i * 20);
+    }
+  }
+  // dark variations
+  @for $i from 1 through 5 {
+    .text-#{$key}-dark-#{$i} {
+      color: mix(black, $val, $i * 20)
+    }
+    .text-hover-#{$key}-dark-#{$i} {
+      &:hover {
+        color: mix(black, $val, $i * 20);
+      }
+    }
+
+    .bg-#{$key}-dark-#{$i} {
+      background-color: mix(black, $val, $i * 20);
+    }
+  }
+}
+}
+
+
+
+
+// if 5 >3 the test-if class will be black text else white.
+// @if(5 > 3) {
+//   .test-if {
+//     color: black;
+//   }
+// } @else {
+//   .test-if-2 {
+//     color: white;
+//   }
+// }

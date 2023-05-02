@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- colors -->
+  <h2>Colors</h2>
+  <span class="text-primary-color">Primary text</span>|
+  <span class="text-secondary-color">Secondary text</span>|
+  <span class="text-error-color">Error text</span>|
+  <span class="text-info-color">Info text</span>|
+  <span class="text-blue">Blue text</span>|
+  <span class="text-green">green text</span>|
+  <span class="text-black">Black text</span>|
+  <span class="text-orange">Orange text</span>|
+  <span class="text-purple">purple text</span>
+  <br><br>
+
+  <span class="bg-primary-color text-white">bg primary</span>|
+  <span class="bg-secondary-color text-white">bg secondary</span>|
+  <span class="bg-orange text-white">bg orange</span>|
+  <span class="bg-error-color text-white">bg error</span>|
+  <span class="bg-purple text-white">bg purple</span>|
+  <span class="bg-info-color">bg info</span>|
+  <span class="bg-black text-white" >bg </span>|
+  <br><br>
+
+  <span class="bg-primary-color-dark-5 text-white">dark 5</span>
+  <span class="bg-primary-color-dark-3 text-white">dark 3</span>
+  <span class="bg-primary-color-dark-1 text-white">dark 1</span>
+  <span class="bg-primary-color-light-5">light 5</span>
+  <span class="bg-primary-color-light-3">light 3</span>
+  <span class="bg-primary-color-light-1">light 1</span>
+  <br>
+  <a href="#" class="text-primary-color text-hover-orange-light-2">Hover me</a>
+
+  <hr class="margin-t-3 margin-b-3">
+
+  <!-- font sizes -->
+  <h2>Font sizes</h2>
+  <div class="font-small">Small</div>
+  <div class="font-medium">Medium</div>
+  <div class="font-large">Large</div>
+  <div class="font-xl">extra large</div>
+  <div class="font-xxl">extra extra large</div>
+
+  <hr class="margin-t-3 margin-b-3">
+
+  <!-- buttons -->
+  <h2>Buttons</h2>
+  <a href="#" class="button">Default button</a>
+  <a href="#" class="button-primary-color text-white">click button</a>
+  <a href="#" class="button-secondary-color text-white">click button</a>
+  <a href="#" class="button-error-color text-white">click button</a>
+  <a href="#" class="button-info-color">click button</a>
+  <a href="#" class="button-outlined-purple text-purple text-hover-white">click button</a>
+  <a href="#" class="button-outlined-orange text-orange text-hover-white">click button</a>
+  <a href="#" class="button-compliment-purple">click button</a>
+  <a href="#" class="button-compliment-primary-color">click button</a>
+
+  <hr class="margin-t-3 margin-b-3">
+
+  <!-- cards -->
+  <h2>Cards</h2>
+  <div class="card">
+    <h1 class="card-heading">Card Heading</h1>
+    <p class="card-body">Lorem, ipsum dolor sit amet consectetur adipisicing elit.<a href="#">Lorem, ipsum dolor.</a> Omnis, reprehenderit!</p>
+  </div>
+
+  <hr class="margin-t-3 margin-b-3">
+
+  <!-- grid system -->
+  <!-- <div class="responsive-test">changing colors responsive</div> -->
+  <h2>Grid system</h2>
+
+  <!-- the row has display of flex -->
+  <div class="row gap-2">
+
+    <!--for small screen the div will take 12 columns in width,meaning each div will take full width. 
+      
+      when screen gets medium the div will take 5 columns in width so the first 2 will be next to each other then the 3rd will move down since there is not enough space, so we will have 2 spaces remaining to the left of the divs both up and down,
+      
+      when its xl the div will take 3 columns in width so all will be next to each other since they will be taking 3 columns and they are 4 of them so it will be 3*4=12-->
+    <div class="col-12-small col-5-medium col-3-xl">
+      <div class="card">
+        <h3 class="card-heading">Hello Malika</h3>
+        <p class="card-body">Lorem, ipsum dolor sit amet consectetur adipisicing elit.<a href="#">Lorem, ipsum dolor.</a> Omnis, reprehenderit!</p>
+      </div>
+    </div>
+
+    <div class="col-12-small col-5-medium col-3-xl">
+      <div class="card">
+        <h3 class="card-heading">Hello Malika</h3>
+        <p class="card-body">Lorem, ipsum dolor sit amet consectetur adipisicing elit.<a href="#">Lorem, ipsum dolor.</a> Omnis, reprehenderit!</p>
+      </div>
+    </div>
+
+    <div class="col-12-small col-5-medium col-3-xl">
+      <div class="card">
+        <h3 class="card-heading">Hello Malika</h3>
+        <p class="card-body">Lorem, ipsum dolor sit amet consectetur adipisicing elit.<a href="#">Lorem, ipsum dolor.</a> Omnis, reprehenderit!</p>
+      </div>
+    </div>
+
+    <div class="col-12-small col-5-medium col-3-xl">
+      <div class="card">
+        <h3 class="card-heading">Hello Malika</h3>
+        <p class="card-body">Lorem, ipsum dolor sit amet consectetur adipisicing elit.<a href="#">Lorem, ipsum dolor.</a> Omnis, reprehenderit!</p>
+      </div>
+    </div>
+  </div>
+  </div>
+    
+</body>
+</html>
