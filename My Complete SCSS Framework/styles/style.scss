@@ -5,7 +5,8 @@
 // reset and layout
 @import "./reset";
 @import "./breakpoint";
-@import "./grid";
+@import "./gridflex";
+@import "./gridgrid";
 
 // colors
 @import "./colors";
@@ -13,9 +14,11 @@
 // components(buttons, nav, cards)
 @import "./cards";
 @import "./button";
+@import "./navbar";
 
 // utilities (margin, padding, opacity)
 @import "./utilities";
+
 
 
 // button {
@@ -26,3 +29,8 @@
 //   padding: $main-padding;
 //   margin: $main-margin;
 // }
+
+
+// to make sure the styles file is purged so only the styles taht are used appear in the styles.css we need to install using npm. 
+// npm i -D gulp-purgecss
+// npm install --save-dev gulp-purgecss

@@ -1,5 +1,3 @@
-@use "sass:math";
-
 $grid-columns: 12;
 $grid-gaps : (
   "0": 0,
@@ -8,30 +6,37 @@ $grid-gaps : (
   "3": 30px,
 );
 
+// to justify content
+$layout-values: flex-start, flex-end, center, space-between, space-around;
+
 // layout
 
 .container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto; //to center
-  padding: 0 20px;
   box-sizing: border-box; //to incorporate padding and border into total width
+  display: grid;
+  grid-template-columns: repeat($grid-columns, 1fr); // create 12 columns with equal width
+  grid-gap: 10px; // spacing between grid items
 }
 
 .row {
-  display: flex; //every column will be a flex item
-  flex-flow: row wrap; // if screen gets smaller columns are wrapped down to the next row
+  display: contents; // hide the row element so that child elements can be placed directly on the grid
 }
 
 // grid gaps
-// to apply padding to each flex item, direct descendant> and * to be anything, a p , div etc.
-// the margine left -val ill shift to counter padding so we do not have a big space
+// to apply padding to each grid item
 @each $key, $val in $grid-gaps {
   .gap-#{$key} > * {
     padding: $val;
   }
-  .gap-#{$key} {
-    margin-left: -$val;
+}
+
+// justify content classes
+@each $val in $layout-values {
+  .justify-#{$val} {
+    justify-content: $val;
   }
 }
 
@@ -40,9 +45,7 @@ $grid-gaps : (
   @for $i from 1 through $grid-columns {
     .col-#{$i}-small {
       box-sizing: border-box;
-      flex-grow: 0;
-      width: math.div($i * 100%, $grid-columns);
-
+      grid-column: span $i; // occupy $i columns
     }
   }
 }
@@ -51,9 +54,7 @@ $grid-gaps : (
   @for $i from 1 through $grid-columns {
     .col-#{$i}-medium {
       box-sizing: border-box;
-      flex-grow: 0;
-      width: math.div($i*100%, $grid-columns);
-
+      grid-column: span $i; // occupy $i columns
     }
   }
 }
@@ -62,9 +63,7 @@ $grid-gaps : (
   @for $i from 1 through $grid-columns {
     .col-#{$i}-large {
       box-sizing: border-box;
-      flex-grow: 0;
-      width: math.div($i*100%, $grid-columns);
-
+      grid-column: span $i; // occupy $i columns
     }
   }
 }
@@ -73,9 +72,7 @@ $grid-gaps : (
   @for $i from 1 through $grid-columns {
     .col-#{$i}-xl {
       box-sizing: border-box;
-      flex-grow: 0;
-      width: math.div($i*100%, $grid-columns);
-
+      grid-column: span $i; // occupy $i columns
     }
   }
 }

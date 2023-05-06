@@ -1,0 +1,31 @@
+
+// when we put the % it doe not create a separate class for layout it only extends the content to the other classes below
+
+%flex-layout {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.navbar {
+  @extend %flex-layout;
+  padding: $main-padding $main-padding * 2;
+  box-shadow: $main-box-shadow;
+
+  .site-title {
+    font-size: $font-size-lg;
+  }
+
+  .container {
+    @extend %flex-layout;
+  }
+}
+
+@each $key, $val in $colors {
+  .navbar-#{$key} {
+    @extend .navbar;
+    background-color: $val;
+  }
+}
